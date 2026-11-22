@@ -11,6 +11,7 @@ Curso gratuito e aprofundado de **História e Geografia do Brasil**, com o essen
 Cada aula traz: objetivo, por que importa, explicação aprofundada, dados e números-chave com fonte, linha do tempo, conceitos e personagens, mitos e confusões comuns, conexão Nordeste/Ceará, resumo e links gratuitos para aprofundar.
 
 ## Recursos
+- **App instalável (PWA)**: instala no celular e no computador, com ícone próprio, e funciona offline depois da primeira visita
 - Tela de abertura animada (mapa do Brasil desenhado ao vivo, linha do tempo em movimento) com botão "Continuar de onde parei"
 - Tela inicial para escolher a trilha
 - Sumário lateral clicável (Trilha › Período › Módulo › Aula), com busca e destaque da aula atual
@@ -22,10 +23,18 @@ Cada aula traz: objetivo, por que importa, explicação aprofundada, dados e nú
 ## Publicar no GitHub Pages (5 minutos)
 1. Entre em [github.com](https://github.com) e clique em **New repository**.
 2. Dê um nome (ex.: `brasil-a-fundo`), deixe **Public** e clique em **Create repository**.
-3. Clique em **uploading an existing file** e arraste os arquivos desta pasta: `index.html`, `README.md`, `PROMPT.md` e `.nojekyll`. Clique em **Commit changes**.
-   - O `.nojekyll` começa com ponto e pode ficar oculto no seu computador; ele é opcional.
+3. Clique em **uploading an existing file** e arraste **todo o conteúdo desta pasta**: `index.html`, `manifest.webmanifest`, `sw.js`, a pasta `icons`, `README.md` e `PROMPT.md`. Clique em **Commit changes**.
+   - Os arquivos `manifest.webmanifest`, `sw.js` e a pasta `icons` são o que torna o curso **instalável** — não deixe de enviá-los.
+   - O `.nojekyll` começa com ponto, fica oculto no computador e é opcional.
 4. Vá em **Settings › Pages**. Em **Source**, escolha **Deploy from a branch**, branch **main**, pasta **/ (root)** e clique em **Save**.
 5. Em 1–2 minutos o site estará em `https://SEU-USUARIO.github.io/brasil-a-fundo/`.
+
+## Como instalar o app
+- **Android (Chrome)**: abra o site, toque em **⬇ Instalar app** (ou no menu ⋮ › **Instalar app**).
+- **Computador (Chrome/Edge)**: clique no ícone de instalar na barra de endereço ou no botão **⬇** do topo.
+- **iPhone (Safari)**: toque em **Compartilhar** › **Adicionar à Tela de Início**.
+
+Ao publicar uma atualização, mude o nome do cache em `sw.js` (ex.: `brasil-a-fundo-v2`) para os aparelhos baixarem a versão nova.
 
 ## Como adicionar novas aulas
 No `index.html`, procure a linha:
