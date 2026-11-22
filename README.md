@@ -23,8 +23,8 @@ Cada aula traz: objetivo, por que importa, explicação aprofundada, dados e nú
 ## Publicar no GitHub Pages (5 minutos)
 1. Entre em [github.com](https://github.com) e clique em **New repository**.
 2. Dê um nome (ex.: `brasil-a-fundo`), deixe **Public** e clique em **Create repository**.
-3. Clique em **uploading an existing file** e arraste **todo o conteúdo desta pasta**: `index.html`, `manifest.webmanifest`, `sw.js`, a pasta `icons`, `README.md` e `PROMPT.md`. Clique em **Commit changes**.
-   - Os arquivos `manifest.webmanifest`, `sw.js` e a pasta `icons` são o que torna o curso **instalável** — não deixe de enviá-los.
+3. Clique em **uploading an existing file** e arraste **todo o conteúdo desta pasta**: `index.html`, `manifest.webmanifest`, `sw.js`, os 6 ícones `.png`, `README.md` e `PROMPT.md`. Clique em **Commit changes**.
+   - Os arquivos `manifest.webmanifest`, `sw.js` e os 6 ícones `.png` são o que torna o curso **instalável** — não deixe de enviá-los.
    - O `.nojekyll` começa com ponto, fica oculto no computador e é opcional.
 4. Vá em **Settings › Pages**. Em **Source**, escolha **Deploy from a branch**, branch **main**, pasta **/ (root)** e clique em **Save**.
 5. Em 1–2 minutos o site estará em `https://SEU-USUARIO.github.io/brasil-a-fundo/`.
