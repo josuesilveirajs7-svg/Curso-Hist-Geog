@@ -2,11 +2,11 @@
 
 Curso gratuito e aprofundado de **História e Geografia do Brasil**, com o essencial de **História Geral** e **Geografia Geral**. Tudo em um único arquivo `index.html` (HTML + CSS + JavaScript), sem dependências.
 
-## Trilhas (142 aulas, todas completas)
+## Trilhas (154 aulas, todas completas)
 1. 📜 História do Brasil — 66 aulas
 2. 🗺️ Geografia do Brasil — 33 aulas
-3. 🌍 História Geral — o essencial — 32 aulas (inclui África, Ásia e Américas antes de 1500, tráfico atlântico, EUA no séc. XIX, ordem de 1945, América Latina na Guerra Fria e Oriente Médio)
-4. 🌐 Geografia Geral — o essencial — 11 aulas
+3. 🌍 História Geral — o essencial — 37 aulas (inclui África, Ásia e Américas antes de 1500, Pérsia, Han e Gupta, Império Otomano, unificação alemã, Restauração Meiji, tráfico atlântico, EUA no séc. XIX, ordem de 1945, América Latina na Guerra Fria, Oriente Médio e história do comércio mundial)
+4. 🌐 Geografia Geral — o essencial — 18 aulas (inclui módulo de geopolítica e relações internacionais)
 
 Cada aula traz: objetivo, por que importa, explicação aprofundada, dados e números-chave com fonte, linha do tempo, conceitos e personagens, mitos e confusões comuns, conexão Nordeste/Ceará, resumo e links gratuitos para aprofundar.
 
