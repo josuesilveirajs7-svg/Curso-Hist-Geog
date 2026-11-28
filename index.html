@@ -232,7 +232,7 @@ table.dados th{color:var(--muted);font-weight:600;font-size:13px;text-transform:
       <h1 id="introTitulo" aria-label="Brasil a Fundo">Brasil a Fundo</h1>
       <p class="sub">Do povoamento antigo do território ao Brasil de hoje, do relevo às cidades — e o essencial do mundo para entender o nosso lugar nele.</p>
       <div class="stats">
-        <div class="stat"><b data-n="142">0</b><span>aulas</span></div>
+        <div class="stat"><b data-n="154">0</b><span>aulas</span></div>
         <div class="stat"><b data-n="4">0</b><span>trilhas</span></div>
         <div class="stat"><b data-n="2026" data-de="1500">1500</b><span>até hoje</span></div>
       </div>
@@ -262,7 +262,7 @@ table.dados th{color:var(--muted);font-weight:600;font-size:13px;text-transform:
     <p>Um curso gratuito e aprofundado: tudo sobre o Brasil — do povoamento antigo do território até hoje, do relevo às cidades — e o essencial do mundo para entender o nosso lugar nele. Escolha uma trilha para começar.</p>
   </div>
   <div class="cards" id="cards"></div>
-  <div class="home-note">Seu progresso fica salvo neste navegador. O curso tem 142 aulas completas em 4 trilhas. Os números foram conferidos em fontes oficiais até novembro de 2026.</div>
+  <div class="home-note">Seu progresso fica salvo neste navegador. O curso tem 154 aulas completas em 4 trilhas. Os números foram conferidos em fontes oficiais até novembro de 2026.</div>
   <div class="dica-ios hidden" id="dicaIos">Para instalar no iPhone: toque em <b>Compartilhar</b> e depois em <b>Adicionar à Tela de Início</b>.</div>
   <footer class="site-foot">Desenvolvido por <strong>Josué Silveira</strong></footer>
 </section>
@@ -458,15 +458,17 @@ const PLANO = [
       { titulo:'Módulo 1 · Origens', aulas:[
         {id:'hg-01', titulo:'Pré-História, Revolução Agrícola e as primeiras cidades'},
         {id:'hg-02', titulo:'Mesopotâmia, Egito e as civilizações antigas da Ásia'} ]},
-      { titulo:'Módulo 2 · Antiguidade clássica', aulas:[
+      { titulo:'Módulo 2 · Antiguidade clássica na Europa e na Ásia', aulas:[
         {id:'hg-03', titulo:'Grécia: pólis, democracia e filosofia'},
-        {id:'hg-04', titulo:'Roma: república, império e queda'} ]},
+        {id:'hg-04', titulo:'Roma: república, império e queda'},
+        {id:'hg-33', titulo:'Impérios clássicos da Ásia: Pérsia, China Han e Índia Gupta'} ]},
       { titulo:'Módulo 3 · Idade Média', aulas:[
         {id:'hg-05', titulo:'Feudalismo, Igreja e Cruzadas'},
         {id:'hg-06', titulo:'O Islã e o mundo bizantino'},
         {id:'hg-24', titulo:'Crise do século XIV, monarquias nacionais e o nascimento de Portugal'} ]},
       { titulo:'Módulo 4 · Mundos além da Europa antes de 1500', aulas:[
         {id:'hg-25', titulo:'Mongóis, China e Oceano Índico: o mundo conectado antes dos europeus'},
+        {id:'hg-34', titulo:'Império Otomano: seis séculos entre três continentes'},
         {id:'hg-26', titulo:'África antes do tráfico atlântico: reinos, impérios e sociedades'},
         {id:'hg-27', titulo:'América antes de Colombo: maias, astecas, incas e a Amazônia antiga'} ]}
     ]},
@@ -485,7 +487,9 @@ const PLANO = [
         {id:'hg-13', titulo:'Independências na América Latina e Haiti'} ]},
       { titulo:'Módulo 7 · Século XIX', aulas:[
         {id:'hg-29', titulo:'Estados Unidos no século XIX: expansão, Guerra Civil e segregação'},
-        {id:'hg-14', titulo:'Nacionalismos, unificações e imperialismo'} ]},
+        {id:'hg-35', titulo:'Congresso de Viena e unificação da Alemanha (1815–1914)'},
+        {id:'hg-14', titulo:'Nacionalismos, unificações e imperialismo'},
+        {id:'hg-36', titulo:'Japão: dos samurais à Restauração Meiji e ao império'} ]},
       { titulo:'Módulo 8 · As guerras mundiais e o entreguerras', aulas:[
         {id:'hg-15', titulo:'Primeira Guerra Mundial'},
         {id:'hg-16', titulo:'Revolução Russa'},
@@ -502,13 +506,14 @@ const PLANO = [
         {id:'hg-32', titulo:'Oriente Médio no século XX: Israel, Palestina, petróleo e Irã'} ]},
       { titulo:'Módulo 10 · Depois da Guerra Fria', aulas:[
         {id:'hg-22', titulo:'Fim da URSS e a globalização'},
-        {id:'hg-23', titulo:'Século XXI: 11 de Setembro, crise de 2008, ascensão da China, pandemia e guerra na Ucrânia'} ]}
+        {id:'hg-23', titulo:'Século XXI: 11 de Setembro, crise de 2008, ascensão da China, pandemia e guerra na Ucrânia'},
+        {id:'hg-37', titulo:'História do comércio mundial: das caravanas aos contêineres'} ]}
     ]}
   ]
 },
 {
   id:'geografia-geral', icone:'🌐', titulo:'Geografia Geral — o essencial',
-  descricao:'O planeta e o mundo atual em poucos e bons módulos: natureza, população, economia e geopolítica.',
+  descricao:'O planeta e o mundo atual: natureza, população, economia, geopolítica e relações internacionais.',
   periodos:[
     { titulo:'Bloco 1 — O planeta', modulos:[
       { titulo:'Módulo 1 · Terra e natureza', aulas:[
@@ -530,6 +535,17 @@ const PLANO = [
         {id:'gg-09', titulo:'Ordem mundial: EUA, China, Rússia e o Sul Global'},
         {id:'gg-10', titulo:'Conflitos atuais: Oriente Médio, Ucrânia e África'},
         {id:'gg-11', titulo:'Questões ambientais globais e acordos do clima'} ]}
+    ]},
+    { titulo:'Bloco 4 — Geopolítica e relações internacionais', modulos:[
+      { titulo:'Módulo 5 · Estados, teorias e instituições', aulas:[
+        {id:'gg-12', titulo:'Geografia política: Estado, nação, território, fronteiras e disputas territoriais'},
+        {id:'gg-13', titulo:'Teorias das relações internacionais: realismo, liberalismo, poder e a armadilha de Tucídides'},
+        {id:'gg-14', titulo:'Diplomacia, multilateralismo, direito internacional e sanções (ONU, OMC, FMI)'} ]},
+      { titulo:'Módulo 6 · Força, mares, recursos e o Sul Global', aulas:[
+        {id:'gg-15', titulo:'Alianças militares e dissuasão nuclear'},
+        {id:'gg-16', titulo:'Mares, rotas e pontos estratégicos de passagem'},
+        {id:'gg-17', titulo:'Recursos naturais, minerais críticos e interdependência econômica'},
+        {id:'gg-18', titulo:'Sul Global, refugiados e o lugar do Brasil no mundo'} ]}
     ]}
   ]
 }
@@ -10743,7 +10759,7 @@ const AULAS = {
   <div class="box box-analogia"><span class="rot">Analogia</span>Imagine que quase toda a cidade compra gás de cozinha de poucos fornecedores, e eles combinam, de um dia para o outro, vender menos e cobrar quatro vezes mais. Tudo encarece: transporte, comida, indústria. Foi o que aconteceu com os países importadores de petróleo em 1973 — entre eles o Brasil, que importava cerca de 80% do petróleo que consumia.</div>
   <h3>7. O Irã: de 1953 a 1979 e depois</h3>
   <p>Em 1951, o primeiro-ministro iraniano <b>Mohammad Mossadegh</b> nacionalizou o petróleo, até então controlado por uma empresa britânica. Em 1953, um golpe organizado pela CIA e pelo serviço secreto britânico o derrubou e fortaleceu o poder do xá <b>Mohammad Reza Pahlavi</b>, aliado do Ocidente, que modernizou o país de cima para baixo, com uma polícia política temida (a Savak). Em 1979, uma revolução popular — com liberais, esquerdistas e religiosos — derrubou o xá, e o aiatolá <b>Ruhollah Khomeini</b> instaurou a <b>República Islâmica</b>, governada por clérigos xiitas. Estudantes ocuparam a embaixada dos EUA e mantiveram 52 reféns por 444 dias.</p>
-  <p>Em 1980, o Iraque de <b>Saddam Hussein</b> invadiu o Irã: a guerra durou até 1988, com centenas de milhares de mortos e uso de armas químicas pelo Iraque. Depois, Saddam invadiu o Kuwait (1990) e foi expulso por uma coalizão liderada pelos EUA na <b>Guerra do Golfo</b> (1991). A rivalidade entre o Irã xiita e a Arábia Saudita sunita (aula hg-06), o programa nuclear iraniano e a hostilidade entre Irã e Israel — que chegaram a uma guerra direta de doze dias em junho de 2025, com ataques americanos a instalações nucleares iranianas — marcam a região até hoje. Internamente, o regime enfrentou grandes protestos, como os de 2022, sob o lema "Mulher, Vida, Liberdade".</p>`,
+  <p>Em 1980, o Iraque de <b>Saddam Hussein</b> invadiu o Irã: a guerra durou até 1988, com centenas de milhares de mortos e uso de armas químicas pelo Iraque. Depois, Saddam invadiu o Kuwait (1990) e foi expulso por uma coalizão liderada pelos EUA na <b>Guerra do Golfo</b> (1991). A rivalidade entre o Irã xiita e a Arábia Saudita sunita (aula hg-06), o programa nuclear iraniano e a hostilidade entre Irã e Israel — que chegaram a uma guerra direta de doze dias em junho de 2025, com ataques americanos a instalações nucleares iranianas, e a uma guerra aberta a partir de 28 de fevereiro de 2026, iniciada por ataques de EUA e Israel, que levou ao fechamento do Estreito de Ormuz (aula gg-16) — marcam a região até hoje. Internamente, o regime enfrentou grandes protestos, como os de 2022, sob o lema "Mulher, Vida, Liberdade".</p>`,
   linhaTempo:[
     ['1896–1897','<i>O Estado Judeu</i>, de Herzl; primeiro Congresso Sionista.'],
     ['1915–1916','Correspondência Hussein–McMahon; acordo Sykes-Picot (1916).'],
@@ -10769,7 +10785,8 @@ const AULAS = {
     ['2007','Hamas assume o controle de Gaza.'],
     ['2010','Brasil reconhece o Estado da Palestina.'],
     ['Out. 2023','Ataque do Hamas e guerra em Gaza (aula hg-23).'],
-    ['Jun. 2025','Guerra de doze dias entre Israel e Irã.']
+    ['Jun. 2025','Guerra de doze dias entre Israel e Irã.'],
+    ['Fev. 2026','EUA e Israel atacam o Irã; crise no Estreito de Ormuz.']
   ],
   conceitos:[
     ['Sionismo','Movimento nacional judaico pela criação de um Estado na terra de Israel/Palestina.'],
@@ -10806,6 +10823,979 @@ const AULAS = {
     {tipo:'busca', nome:'Revolução Iraniana de 1979', url:'https://www.youtube.com/results?search_query=Revolu%C3%A7%C3%A3o+Iraniana+1979+aula+hist%C3%B3ria+Khomeini', desc:'Aulas sobre o Irã moderno.'},
     {tipo:'busca', nome:'Crise do petróleo de 1973 e o Brasil', url:'https://www.youtube.com/results?search_query=crise+do+petr%C3%B3leo+1973+OPEP+Brasil+milagre+econ%C3%B4mico+Pro%C3%A1lcool', desc:'Vídeos sobre o choque do petróleo.'},
     {tipo:'busca', nome:'Acordo Sykes-Picot e as fronteiras do Oriente Médio', url:'https://www.youtube.com/results?search_query=Sykes-Picot+fronteiras+do+Oriente+M%C3%A9dio+explica%C3%A7%C3%A3o', desc:'Como as fronteiras foram desenhadas.'}
+  ]
+},
+
+'hg-33': {
+  tags:'império persa aquemênidas ciro dario satrapias estrada real persépolis cilindro de ciro zoroastrismo guerras médicas partos sassânidas china qin shi huangdi guerreiros de terracota dinastia han confucionismo papel cai lun zhang qian sima qian índia maurya ashoka império gupta idade clássica aryabhata zero sistema decimal nalanda kalidasa xadrez romila thapar',
+  objetivo:`Ao final, você vai saber explicar como funcionaram três grandes impérios clássicos da Ásia — o <b>Império Persa</b> dos aquemênidas, a <b>China da dinastia Han</b> e a <b>Índia dos impérios Maurya e Gupta</b> —, o que eles inventaram e por que muito do que usamos hoje, do zero ao papel, vem deles.`,
+  porque:`<p>Na escola, a "Antiguidade clássica" costuma ser só Grécia e Roma. Mas, na mesma época, a Pérsia governava o maior império que o mundo já tinha visto, a China Han tinha tantos habitantes quanto o Império Romano, e matemáticos indianos criavam o sistema de numeração com zero que usamos para fazer qualquer conta — inclusive a de um estoque.</p>
+  <p>Esses impérios também ajudam a entender o presente: a maioria dos chineses ainda se identifica como "povo han"; a roda de Ashoka está no centro da bandeira da Índia; e o Irã atual se vê como herdeiro de uma civilização persa de 2.500 anos. Esta aula aprofunda o que a aula hg-02 apresenta brevemente.</p>`,
+  corpo:`
+  <h3>1. O Império Persa: o primeiro "império mundial"</h3>
+  <p>Em 550 a.C., <b>Ciro II</b>, o Grande, rei de um pequeno reino do sudoeste do Irã, derrotou os medos e, em seguida, conquistou a Lídia (na Anatólia) e a Babilônia (539 a.C.). Seus sucessores chegaram ao Egito e ao vale do Indo. O Império <b>Aquemênida</b> (nome da dinastia) foi, até então, o maior da história, governando talvez dezenas de milhões de pessoas de dezenas de povos.</p>
+  <ul>
+    <li><b>Tolerância como método de governo</b>: Ciro permitiu que os povos mantivessem suas religiões e costumes. Libertou os judeus do Cativeiro da Babilônia (aula hg-02), e o Cilindro de Ciro, que registra suas medidas na Babilônia, foi apresentado no século XX como "primeira declaração de direitos humanos" — leitura considerada exagerada pelos historiadores, mas que mostra a força do mito.</li>
+    <li><b>Administração</b>: <b>Dario I</b> (522–486 a.C.) dividiu o império em províncias, as <b>satrapias</b>, governadas por sátrapas fiscalizados por inspetores conhecidos como "os olhos e ouvidos do rei". Criou uma moeda de ouro (o dárico), padronizou impostos e construiu a <b>Estrada Real</b>, de cerca de 2.500 km, de Sárdis a Susa, com postos de troca de cavalos — o historiador grego Heródoto ficou impressionado com a rapidez dos mensageiros.</li>
+    <li><b>Religião</b>: os reis aquemênidas cultuavam Ahura Mazda, deus central do <b>zoroastrismo</b>, religião que opõe o bem e o mal, a verdade e a mentira, e que influenciou ideias como juízo final, céu e inferno.</li>
+    <li><b>Arte e capitais</b>: <b>Persépolis</b>, com relevos de povos de todo o império trazendo tributos ao rei.</li>
+  </ul>
+  <p>As <b>Guerras Médicas</b> contra as cidades gregas (Maratona, 490 a.C.; Termópilas e Salamina, 480 a.C.) foram, para os gregos, a defesa da liberdade (aula hg-03); para a Pérsia, um conflito de fronteira. O império caiu diante de <b>Alexandre</b> (330 a.C.). Depois vieram os <b>partos</b> e os <b>sassânidas</b> (224–651), rivais de Roma e de Bizâncio por séculos, até a conquista árabe. A cultura persa sobreviveu: a língua persa, a poesia (o <i>Livro dos Reis</i>, de Ferdowsi, por volta do ano 1000) e a administração influenciaram todo o mundo islâmico.</p>
+  <div class="box box-debate"><span class="rot">Debate</span>Quase tudo o que o Ocidente sabia sobre os persas vinha de autores gregos, como Heródoto, que os retratavam como orientais despóticos e luxuosos, opostos à liberdade grega. Historiadores como Pierre Briant, trabalhando com tabuletas administrativas de Persépolis, inscrições e arqueologia, mostraram um império eficiente e flexível, que governava pela negociação com elites locais. É mais um exemplo de como o ponto de vista das fontes molda a imagem do passado (veja o debate sobre "despotismo oriental" na aula hg-02).</div>
+  <h3>2. A China unificada: Qin e Han</h3>
+  <p>Em <b>221 a.C.</b>, o rei de Qin venceu os reinos rivais e se proclamou <b>Qin Shi Huangdi</b>, o "Primeiro Imperador". Em poucos anos, <b>padronizou</b> a escrita, os pesos e medidas, a moeda e até a distância entre as rodas das carroças; ligou trechos de muralhas no norte e construiu estradas e canais. Governou com dureza, segundo a doutrina <b>legista</b> de leis e punições severas, e perseguiu letrados. Seu túmulo é guardado pelo <b>Exército de Terracota</b>, com cerca de 8 mil soldados de barro em tamanho natural, descoberto por camponeses em 1974.</p>
+  <p>A dinastia Qin durou só até 206 a.C. A seguinte, <b>Han</b> (206 a.C.–220 d.C.), manteve a unificação, mas adotou o <b>confucionismo</b> como ideologia oficial: o imperador governaria pela virtude, apoiado por funcionários letrados escolhidos por mérito e formados nos clássicos confucianos — base da burocracia chinesa por dois mil anos. Alguns marcos:</p>
+  <ul>
+    <li>O enviado <b>Zhang Qian</b> viajou à Ásia Central (século II a.C.), abrindo os contatos que deram origem às <b>Rotas da Seda</b> (aula hg-25).</li>
+    <li>O Estado controlou o sal e o ferro como monopólios — e, em 81 a.C., promoveu um debate público famoso sobre se o governo devia ou não interferir na economia.</li>
+    <li>O funcionário <b>Cai Lun</b> aperfeiçoou a fabricação do <b>papel</b> (por volta de 105 d.C.).</li>
+    <li>O historiador <b>Sima Qian</b> escreveu os <i>Registros do Historiador</i>, modelo da historiografia chinesa.</li>
+    <li>Um censo do ano 2 d.C. contou cerca de 57 a 58 milhões de pessoas — população comparável à do Império Romano na mesma época.</li>
+  </ul>
+  <p>Até hoje, mais de 90% dos chineses se identificam como <b>han</b>, e os caracteres chineses são chamados de "caracteres han". O império se fragmentou em 220, mas a ideia de uma China unificada sob um único "Filho do Céu" permaneceu.</p>
+  <div class="box box-analogia"><span class="rot">Analogia</span>A padronização de Qin funciona como a criação de um código único de produtos num grande almoxarifado com dezenas de filiais: antes, cada unidade usava seu próprio nome, unidade de medida e formulário; depois, tudo podia ser contado, comparado e cobrado a partir do centro. Foi isso que permitiu a um só governo administrar um território imenso.</div>
+  <h3>3. A Índia: Maurya e Gupta</h3>
+  <p>Por volta de 321 a.C., Chandragupta Maurya fundou o primeiro grande império da Índia. Seu neto <b>Ashoka</b> (c. 268–232 a.C.) conquistou o reino de Kalinga numa guerra sangrenta e, segundo suas próprias inscrições, arrependido, converteu-se ao <b>budismo</b>. Mandou gravar em rochas e colunas por todo o império "éditos" pregando a não violência, a tolerância religiosa e o cuidado com pessoas e animais, e enviou missionários que levaram o budismo ao Sri Lanka e além. O capitel de leões de uma de suas colunas é o emblema da Índia atual, e a <b>roda</b> de Ashoka está no centro da bandeira indiana.</p>
+  <p>O <b>Império Gupta</b> (c. 320–550 d.C.), no norte da Índia, é chamado de "idade clássica" indiana:</p>
+  <ul>
+    <li><b>Matemática</b>: o sistema de numeração <b>decimal posicional</b> se consolidou na Índia, e o <b>zero</b> passou a ser usado como número. O astrônomo <b>Aryabhata</b> (nascido em 476) calculou o valor de pi com precisão e propôs que a Terra gira sobre seu eixo; pouco depois do período Gupta, Brahmagupta (628) escreveu regras para operar com o zero e com números negativos. Esses algarismos chegaram aos árabes — o matemático persa Al-Khwarizmi, cujo nome deu origem à palavra "algoritmo", escreveu sobre eles no século IX — e daí à Europa, onde Fibonacci os divulgou em 1202. Por isso os chamamos de algarismos "<b>indo-arábicos</b>".</li>
+    <li><b>Ensino</b>: o centro budista de <b>Nalanda</b>, fundado no período Gupta, recebeu estudantes de toda a Ásia por séculos, até ser destruído por volta de 1200.</li>
+    <li><b>Arte e literatura</b>: o poeta e dramaturgo Kalidasa; as pinturas das cavernas de Ajanta.</li>
+    <li>O <b>xadrez</b> tem origem num jogo indiano (o <i>chaturanga</i>), que passou à Pérsia e ao mundo árabe e chegou à Península Ibérica.</li>
+  </ul>
+  <p>O hinduísmo se reorganizou em torno do culto devocional a deuses como Vishnu e Shiva, e a sociedade de castas se consolidou. O império declinou com as invasões dos hunos brancos (heftalitas), no século VI.</p>
+  <div class="box box-debate"><span class="rot">Debate: uma "Idade de Ouro"?</span>Historiadores nacionalistas indianos do século XX apresentaram o período Gupta como uma "Idade de Ouro" hindu, prova de que a Índia tinha sido grandiosa antes dos muçulmanos e dos britânicos. A historiadora indiana <b>Romila Thapar</b> e outros criticaram essa imagem: ela vale para a elite da corte, mas ignora o endurecimento das castas, a situação dos "intocáveis" e das mulheres, e o fato de que muitas conquistas culturais vieram antes ou depois dos Gupta. O debate continua vivo porque o passado da Índia é usado nas disputas políticas atuais entre o nacionalismo hindu e o secularismo.</div>`,
+  linhaTempo:[
+    ['550–539 a.C.','Ciro II funda o Império Persa e conquista a Babilônia.'],
+    ['522–486 a.C.','Reinado de Dario I: satrapias, dárico, Estrada Real.'],
+    ['490–480 a.C.','Guerras Médicas contra os gregos.'],
+    ['330 a.C.','Alexandre põe fim ao Império Aquemênida.'],
+    ['c. 321 a.C.','Fundação do Império Maurya na Índia.'],
+    ['c. 268–232 a.C.','Reinado de Ashoka.'],
+    ['221 a.C.','Qin Shi Huangdi unifica a China.'],
+    ['206 a.C.–220 d.C.','Dinastia Han.'],
+    ['Séc. II a.C.','Viagens de Zhang Qian; início das Rotas da Seda.'],
+    ['c. 105 d.C.','Cai Lun aperfeiçoa o papel.'],
+    ['224–651','Império Sassânida na Pérsia.'],
+    ['c. 320–550','Império Gupta na Índia.'],
+    ['499','Aryabhata escreve seu tratado de matemática e astronomia.'],
+    ['1974','Descoberta do Exército de Terracota.']
+  ],
+  conceitos:[
+    ['Aquemênidas','Dinastia do primeiro Império Persa (550–330 a.C.).'],
+    ['Satrapia','Província do Império Persa, governada por um sátrapa.'],
+    ['Zoroastrismo','Religião persa centrada em Ahura Mazda e na luta entre o bem e o mal.'],
+    ['Legismo','Doutrina chinesa de governo por leis rígidas e punições severas, adotada por Qin.'],
+    ['Confucionismo','Ética de Confúcio baseada na hierarquia, no dever e no governo pela virtude; ideologia oficial dos Han.'],
+    ['Éditos de Ashoka','Inscrições do imperador Maurya pregando a não violência e a tolerância.'],
+    ['Sistema decimal posicional','Sistema em que o valor do algarismo depende da posição, com o zero; criado na Índia.'],
+    ['Algarismos indo-arábicos','Os algarismos que usamos, criados na Índia e transmitidos pelos árabes.']
+  ],
+  mitos:[
+    ['Os algarismos que usamos foram inventados pelos árabes.','Foram desenvolvidos na Índia; os árabes os aperfeiçoaram e transmitiram à Europa.'],
+    ['Os persas eram bárbaros despóticos, como diziam os gregos.','Governavam um império imenso com administração eficiente e relativa tolerância religiosa.'],
+    ['A Grande Muralha da China foi construída de uma vez por Qin Shi Huangdi.','Ele ligou trechos de muralhas anteriores; a maior parte da muralha visível hoje é da dinastia Ming (séculos XIV a XVII).'],
+    ['A Grande Muralha é visível do espaço a olho nu.','É muito longa, mas estreita demais para ser vista a olho nu da órbita; astronautas confirmam.']
+  ],
+  ceara:`<p>Essas civilizações estão no nosso dia a dia mais do que parece. Toda conta feita no Ceará — de uma nota fiscal a um inventário de estoque — usa os <b>algarismos indo-arábicos</b> e o <b>zero</b> criados na Índia. E várias palavras do português chegaram da Pérsia, quase sempre através do árabe: <i>azul</i>, <i>laranja</i>, <i>jasmim</i>, <i>bazar</i> e <i>xadrez</i> (do persa <i>shatranj</i>, nome do jogo indiano que os persas adotaram).</p>`,
+  resumo:[
+    'O Império Persa aquemênida (550–330 a.C.) governou com satrapias, moeda, estradas e relativa tolerância; a imagem negativa vem das fontes gregas.',
+    'Qin unificou e padronizou a China (221 a.C.); os Han adotaram o confucionismo, abriram as Rotas da Seda e aperfeiçoaram o papel.',
+    'Na Índia, Ashoka espalhou o budismo; no período Gupta, consolidaram-se o sistema decimal e o zero, que chegaram à Europa pelos árabes.',
+    'A ideia de "Idade de Ouro" Gupta é debatida e usada na política indiana atual.'
+  ],
+  links:[
+    {tipo:'busca', nome:'Império Persa — aula', url:'https://www.youtube.com/results?search_query=Imp%C3%A9rio+Persa+aquem%C3%AAnida+Ciro+Dario+aula+hist%C3%B3ria', desc:'Aulas sobre o primeiro grande império persa.'},
+    {tipo:'busca', nome:'Dinastia Han e a China antiga', url:'https://www.youtube.com/results?search_query=dinastia+Han+China+antiga+hist%C3%B3ria+aula', desc:'Vídeos sobre a China imperial clássica.'},
+    {tipo:'busca', nome:'A história do zero e dos algarismos indo-arábicos', url:'https://www.youtube.com/results?search_query=hist%C3%B3ria+do+zero+%C3%8Dndia+algarismos+indo-ar%C3%A1bicos', desc:'Vídeos de divulgação sobre a matemática indiana.'}
+  ]
+},
+
+'hg-34': {
+  tags:'império otomano osman bursa kosovo 1389 maomé ii conquista de constantinopla istambul selim i solimão o magnífico mohács cerco de viena lepanto devshirme janízaros grão-vizir sistema de millet judeus sefarditas sultanato das mulheres hürrem cafés otomanos karlowitz declínio otomano tanzimat constituição de 1876 abdul hamid ii jovens turcos guerras balcânicas tratado de sèvres atatürk tratado de lausanne troca de populações república da turquia neo-otomanismo santa sofia',
+  objetivo:`Ao final, você vai saber explicar como o <b>Império Otomano</b> nasceu na Anatólia, conquistou Constantinopla e se estendeu por três continentes; como funcionavam suas instituições (sultão, janízaros, sistema de <i>millet</i>); por que o "declínio" é hoje questionado pelos historiadores; e como seu fim, em 1922, deixou marcas nos Bálcãs, no Oriente Médio e na Turquia atual.`,
+  porque:`<p>Por mais de seis séculos (c. 1300–1922), o Império Otomano foi uma das maiores potências do mundo, ligando a Europa, a Ásia e a África. Seu fim produziu muitas das fronteiras e dos conflitos atuais — dos Bálcãs à Palestina, da Síria ao Iraque — e a própria Turquia, que hoje é membro da OTAN, candidata (paralisada) à União Europeia e potência regional.</p>
+  <p>Ele também chegou ao Brasil: os imigrantes sírios e libaneses que se espalharam pelo país, inclusive pelo sertão cearense, eram chamados de "turcos" porque viajavam com passaporte otomano. E o café — que fez a riqueza do Brasil — se popularizou no mundo a partir das casas de café de Istambul.</p>`,
+  corpo:`
+  <h3>1. De principado a império (c. 1300–1453)</h3>
+  <p>No fim do século XIII, a Anatólia estava fragmentada em principados turcos muçulmanos, surgidos depois das migrações turcas e do enfraquecimento de Bizâncio (aula hg-06). Um deles era liderado por <b>Osman</b>, que deu nome à dinastia (em português, "otomanos"). Seus sucessores tomaram Bursa (1326), passaram à Europa e conquistaram boa parte dos Bálcãs — a vitória em Kosovo (1389) é até hoje um mito fundador do nacionalismo sérvio. Em 1402, o conquistador Tamerlão derrotou e capturou o sultão, e o império quase se desfez, mas se recuperou.</p>
+  <p>Em <b>29 de maio de 1453</b>, <b>Maomé II</b> (Mehmed II) conquistou <b>Constantinopla</b> com canhões gigantes que derrubaram as muralhas milenares. A cidade, rebatizada de <b>Istambul</b>, virou capital; a basílica de Santa Sofia virou mesquita. Para os europeus, era o fim do Império Romano do Oriente; para os otomanos, a herança de Roma passava a ser sua — Mehmed se dizia "César de Roma".</p>
+  <h3>2. O auge: Selim I e Solimão (1512–1566)</h3>
+  <ul>
+    <li><b>Selim I</b> derrotou os safávidas do Irã (Chaldiran, 1514) e, em 1516–1517, conquistou a Síria, o Egito e as cidades santas de Meca e Medina, assumindo o papel de protetor do mundo islâmico sunita e, depois, o título de califa.</li>
+    <li><b>Solimão, o Magnífico</b> (1520–1566) venceu a Hungria em Mohács (1526), cercou <b>Viena</b> (1529), dominou o Mediterrâneo oriental e o norte da África. Para os otomanos era <i>Kanuni</i>, "o Legislador", pela organização das leis. Seu arquiteto, <b>Sinan</b>, construiu centenas de edifícios, entre eles a mesquita Süleymaniye.</li>
+    <li>A derrota naval em <b>Lepanto</b> (1571) contra uma liga cristã — em que lutou Miguel de Cervantes, autor de <i>Dom Quixote</i> — foi celebrada na Europa, mas a frota otomana foi reconstruída em menos de um ano.</li>
+  </ul>
+  <h3>3. Como o império funcionava</h3>
+  <ul>
+    <li><b>O sultão e a corte</b>: o poder estava no palácio de Topkapi, com o <b>grão-vizir</b> chefiando o governo. As mulheres da família real, como <b>Hürrem</b> (Roxelana), esposa de Solimão, tiveram enorme influência política — o período seguinte foi chamado depois de "sultanato das mulheres".</li>
+    <li><b>Devshirme e janízaros</b>: meninos de famílias cristãs dos Bálcãs eram recrutados à força, convertidos ao islã e educados para servir ao sultão. Os mais aptos viravam altos funcionários; outros formavam os <b>janízaros</b>, a infantaria de elite e um dos primeiros exércitos permanentes da Europa. Ex-cristãos podiam chegar a grão-vizir — mobilidade inédita, nascida de uma violência contra as famílias.</li>
+    <li><b>Sistema de <i>millet</i></b>: cada comunidade religiosa — ortodoxos gregos, armênios, judeus — tinha autonomia para cuidar de casamento, herança, educação e culto, sob seus líderes religiosos, pagando impostos especiais. Quando a Espanha (1492) e Portugal (1496–1497) expulsaram ou converteram à força os judeus (aula hg-07), o sultão Bayezid II acolheu muitos deles: cidades como Salônica e Istambul tiveram grandes comunidades judaicas sefarditas, que falavam o ladino, uma forma de espanhol antigo.</li>
+    <li><b>Vida urbana</b>: Istambul foi uma das maiores cidades do mundo. As <b>casas de café</b>, que se espalharam por ela no século XVI, tornaram-se espaços de conversa, jogos e política — e o hábito chegou à Europa no século XVII.</li>
+  </ul>
+  <div class="box box-debate"><span class="rot">Declínio ou transformação?</span>Durante muito tempo, os historiadores contaram que o império entrou em "declínio" logo depois de Solimão: sultões fracos, corrupção, atraso militar. Desde os anos 1990, historiadores como Baki Tezcan e Suraiya Faroqhi contestaram essa narrativa, que repetia queixas de autores otomanos nostálgicos e preconceitos europeus. O império dos séculos XVII e XVIII se <b>transformou</b>: o poder passou do sultão para a burocracia, os janízaros e as elites provinciais, e o Estado se adaptou a novas condições. Houve derrotas sérias — o fracasso do segundo cerco de Viena (1683) e o Tratado de Karlowitz (1699), a primeira grande perda de territórios —, mas o império ainda duraria mais de dois séculos.</div>
+  <h3>4. O século XIX: reformas e pressões</h3>
+  <p>Ameaçado pela Rússia, pelas potências europeias e pelos nacionalismos internos, o império tentou se modernizar:</p>
+  <ul>
+    <li>Em 1826, o sultão Mahmud II destruiu os janízaros, que resistiam às reformas militares.</li>
+    <li>As <b>Tanzimat</b> ("reorganizações", 1839–1876) prometeram igualdade de todos os súditos perante a lei, independentemente da religião, criaram escolas, códigos e ministérios modernos.</li>
+    <li>A primeira <b>Constituição</b> (1876) criou um Parlamento, mas o sultão <b>Abdul Hamid II</b> o fechou em 1878 e governou de forma autoritária, apostando no pan-islamismo. Em 1881, a dívida externa levou à criação de uma administração controlada por credores europeus.</li>
+    <li>O império perdia territórios: Grécia (1830), Sérvia, Romênia e Bulgária (1878), Egito (ocupado pelos britânicos em 1882), Líbia (1912) e quase todos os Bálcãs nas guerras de 1912–1913.</li>
+    <li>Em 1908, a revolução dos <b>Jovens Turcos</b> restaurou a constituição; depois, o governo do grupo adotou um nacionalismo turco cada vez mais radical, levou o império à Primeira Guerra ao lado da Alemanha e promoveu o <b>genocídio armênio</b> (aula hg-15).</li>
+  </ul>
+  <h3>5. O fim e a herança</h3>
+  <p>Derrotado em 1918, o império foi repartido. O Tratado de Sèvres (1920) deixava aos turcos apenas parte da Anatólia. O general <b>Mustafa Kemal</b> liderou uma guerra de independência contra gregos, armênios e as potências ocupantes, e o Tratado de <b>Lausanne</b> (1923) reconheceu as fronteiras da nova Turquia. O mesmo tratado organizou uma <b>troca de populações</b>: cerca de 1,2 milhão de cristãos ortodoxos foram enviados da Turquia para a Grécia e cerca de 400 mil muçulmanos fizeram o caminho inverso. A <b>República da Turquia</b> foi proclamada em 29 de outubro de 1923, o califado foi abolido em 1924, e Kemal, chamado <b>Atatürk</b> ("pai dos turcos"), impôs um Estado laico, o alfabeto latino e o voto feminino (1934).</p>
+  <p>A herança otomana segue presente: as fronteiras do Oriente Médio desenhadas sobre suas províncias (aula hg-32), as feridas nos Bálcãs (aula hg-22), a questão curda e armênia, e a política externa turca recente, que críticos chamam de "neo-otomanismo". Em 2020, o governo turco voltou a transformar Santa Sofia, que Atatürk tinha convertido em museu, em mesquita.</p>`,
+  linhaTempo:[
+    ['c. 1299','Osman funda o principado otomano na Anatólia.'],
+    ['1389','Batalha de Kosovo.'],
+    ['1402','Tamerlão derrota os otomanos em Ancara.'],
+    ['29/5/1453','Maomé II conquista Constantinopla.'],
+    ['1492','Bayezid II acolhe judeus expulsos da Espanha.'],
+    ['1514–1517','Selim I vence os safávidas e conquista Síria, Egito e as cidades santas.'],
+    ['1520–1566','Reinado de Solimão, o Magnífico.'],
+    ['1529','Primeiro cerco de Viena.'],
+    ['1571','Batalha de Lepanto.'],
+    ['1683','Fracasso do segundo cerco de Viena.'],
+    ['1699','Tratado de Karlowitz.'],
+    ['1826','Destruição dos janízaros.'],
+    ['1839–1876','Reformas Tanzimat.'],
+    ['1876–1878','Primeira Constituição e seu fechamento por Abdul Hamid II.'],
+    ['1908','Revolução dos Jovens Turcos.'],
+    ['1912–1913','Guerras Balcânicas.'],
+    ['1915','Genocídio armênio.'],
+    ['1923','Tratado de Lausanne; proclamação da República da Turquia.'],
+    ['1924','Abolição do califado.']
+  ],
+  conceitos:[
+    ['Sultão','Soberano do Império Otomano.'],
+    ['Grão-vizir','Chefe do governo otomano, abaixo do sultão.'],
+    ['Devshirme','Recrutamento forçado de meninos cristãos para o serviço do sultão.'],
+    ['Janízaros','Infantaria de elite otomana, formada pelo devshirme.'],
+    ['Millet','Comunidade religiosa com autonomia jurídica dentro do império.'],
+    ['Tanzimat','Reformas modernizadoras do império entre 1839 e 1876.'],
+    ['Jovens Turcos','Movimento nacionalista e reformista que tomou o poder em 1908.'],
+    ['Troca de populações','Transferência forçada de gregos ortodoxos e muçulmanos entre Turquia e Grécia (1923).']
+  ],
+  mitos:[
+    ['O Império Otomano era só "turco".','Era multiétnico e multirreligioso: turcos, árabes, gregos, armênios, curdos, eslavos, judeus e muitos outros, com elites de várias origens.'],
+    ['O império entrou em decadência logo após Solimão e ficou séculos parado.','Os historiadores hoje falam em transformação: o império se adaptou e durou até 1922.'],
+    ['O harém era um lugar de prazeres do sultão.','Era a residência da família real e um centro de poder político, onde mães e esposas de sultões tinham grande influência.'],
+    ['Os imigrantes "turcos" no Brasil eram turcos.','Eram em geral sírios e libaneses, muitos cristãos, chamados assim por causa do passaporte otomano.']
+  ],
+  ceara:`<p>Duas heranças otomanas chegaram ao Ceará. A primeira é humana: os imigrantes sírios e libaneses, os "turcos", que começaram como mascates pelo sertão e se instalaram no comércio de Fortaleza, Sobral, Crato e outras cidades (aula hg-32).</p>
+  <p>A segunda está na xícara. O café, originário da Etiópia e cultivado no Iêmen, popularizou-se nas casas de café do mundo otomano e daí ganhou a Europa; os europeus levaram a planta para as Américas, e o Brasil se tornou o maior produtor mundial. No Ceará, a <b>Serra de Baturité</b> foi, no século XIX, uma importante região cafeeira, com o café cultivado à sombra das árvores — tradição que sobrevive no café sombreado do Maciço.</p>`,
+  resumo:[
+    'Os otomanos surgiram na Anatólia por volta de 1300, conquistaram os Bálcãs e tomaram Constantinopla em 1453.',
+    'O auge veio com Selim I e Solimão: Egito, cidades santas, Hungria, cerco de Viena.',
+    'O império combinava sultão, grão-vizir, janízaros recrutados pelo devshirme e autonomia das comunidades religiosas (millet).',
+    'A ideia de "declínio" é hoje substituída pela de transformação; as perdas cresceram a partir de 1683–1699.',
+    'No século XIX vieram reformas (Tanzimat, Constituição de 1876), dívidas e perdas territoriais.',
+    'Após 1918, o império foi dividido; Atatürk fundou a República da Turquia (1923) e aboliu o califado (1924).'
+  ],
+  links:[
+    {tipo:'busca', nome:'Império Otomano — aula completa', url:'https://www.youtube.com/results?search_query=Imp%C3%A9rio+Otomano+aula+completa+hist%C3%B3ria', desc:'Aulas sobre a história otomana.'},
+    {tipo:'busca', nome:'Queda de Constantinopla em 1453', url:'https://www.youtube.com/results?search_query=queda+de+Constantinopla+1453+document%C3%A1rio', desc:'Documentários sobre a conquista de Maomé II.'},
+    {tipo:'busca', nome:'Atatürk e a fundação da Turquia moderna', url:'https://www.youtube.com/results?search_query=Atat%C3%BCrk+funda%C3%A7%C3%A3o+da+Turquia+moderna+hist%C3%B3ria', desc:'Vídeos sobre o fim do império e a república turca.'}
+  ]
+},
+
+'hg-35': {
+  tags:'unificação da alemanha congresso de viena 1815 metternich confederação germânica santa aliança reino unido de portugal brasil e algarves leopoldina zollverein parlamento de frankfurt 1848 grande alemanha pequena alemanha bismarck sangue e ferro guerra dos ducados guerra austro-prussiana sadowa guerra franco-prussiana sedan telegrama de ems comuna de paris proclamação do império versalhes 1871 alsácia-lorena kulturkampf leis antissocialistas seguro social bismarck segunda revolução industrial guilherme ii weltpolitik corrida naval tríplice aliança tríplice entente sonderweg wehler imigração alemã são leopoldo lei eloy chaves',
+  objetivo:`Ao final, você vai saber explicar como a Europa foi reorganizada no <b>Congresso de Viena</b> (1815), como a Prússia de <b>Bismarck</b> unificou a <b>Alemanha</b> em três guerras (1864–1871), como o novo Império Alemão se tornou potência industrial e criou o primeiro sistema de <b>seguro social</b>, e como o fim do equilíbrio europeu levou à Primeira Guerra Mundial.`,
+  porque:`<p>A Alemanha é hoje a maior economia da Europa, e sua unificação em 1871 mudou o equilíbrio de poder no continente — preparando as duas guerras mundiais. Também foi na Alemanha de Bismarck que nasceu a ideia de previdência social obrigatória, que inspirou sistemas no mundo inteiro, inclusive o INSS brasileiro.</p>
+  <p>O Brasil está ligado a essa história desde o começo: o Congresso de Viena ajudou a transformar o Brasil em Reino Unido a Portugal (1815); uma princesa austríaca, Leopoldina, casou-se com D. Pedro e participou da Independência; e mais de 200 mil alemães imigraram para o Brasil no século XIX, fundando cidades no Sul. A aula hg-14 apresenta o tema de forma resumida; aqui ele é aprofundado.</p>`,
+  corpo:`
+  <h3>1. O Congresso de Viena e a "Alemanha" de 1815</h3>
+  <p>Derrotado Napoleão, as potências vencedoras — Áustria, Prússia, Rússia e Reino Unido, com a França readmitida — reuniram-se em <b>Viena</b> (1814–1815), sob a liderança do chanceler austríaco <b>Metternich</b>. Os princípios eram a <b>legitimidade</b> (devolver o trono às dinastias derrubadas), o <b>equilíbrio de poder</b> (nenhuma potência dominaria a Europa) e a contenção das ideias liberais e nacionalistas. A <b>Santa Aliança</b> (Rússia, Áustria e Prússia) prometia intervir contra revoluções.</p>
+  <p>Não havia um país chamado Alemanha. Havia a <b>Confederação Germânica</b>, frouxa união de 39 Estados — reinos, ducados e cidades livres — presidida pela Áustria, com a Prússia como segunda potência. Falar alemão não significava pertencer a um mesmo Estado.</p>
+  <h3>2. Economia, nacionalismo e 1848</h3>
+  <ul>
+    <li>Em 1834, a Prússia liderou a criação do <b>Zollverein</b>, união aduaneira que eliminou tarifas entre a maioria dos Estados alemães — sem a Áustria. A unificação econômica e as ferrovias vieram antes da política.</li>
+    <li>Intelectuais, estudantes e a burguesia liberal sonhavam com uma nação alemã com constituição. Os irmãos Grimm reuniam contos populares e estudavam a língua como prova de uma identidade comum.</li>
+    <li>Na revolução de <b>1848</b> (aula hg-14), um Parlamento eleito reuniu-se em Frankfurt e escreveu uma constituição para toda a Alemanha. Dividiu-se entre a "Grande Alemanha" (com a Áustria) e a "Pequena Alemanha" (sem ela, liderada pela Prússia). Em 1849, ofereceu a coroa imperial ao rei da Prússia, que a recusou por vir de uma assembleia popular. O projeto liberal fracassou.</li>
+  </ul>
+  <h3>3. Bismarck e as três guerras (1864–1871)</h3>
+  <p>Em 1862, o rei Guilherme I nomeou primeiro-ministro <b>Otto von Bismarck</b>, nobre conservador (<i>junker</i>). Num discurso famoso, ele disse que as grandes questões do tempo não seriam resolvidas por discursos e votações, mas por "<b>ferro e sangue</b>". Governou ignorando o Parlamento para reformar o exército e unificou a Alemanha "de cima para baixo":</p>
+  <table class="dados">
+    <tr><th>Guerra</th><th>Resultado</th></tr>
+    <tr><td><b>Contra a Dinamarca</b> (1864)</td><td>Prússia e Áustria tomam os ducados de Schleswig e Holstein.</td></tr>
+    <tr><td><b>Contra a Áustria</b> (1866)</td><td>Vitória prussiana em Sadowa (Königgrätz) em sete semanas. A Áustria fica fora da Alemanha; nasce a Confederação da Alemanha do Norte sob a Prússia.</td></tr>
+    <tr><td><b>Contra a França</b> (1870–1871)</td><td>Bismarck editou o "telegrama de Ems" para provocar a França, que declarou guerra. Os Estados do sul se uniram à Prússia. Napoleão III foi capturado em <b>Sedan</b> (setembro de 1870), Paris foi sitiada, e a França perdeu a <b>Alsácia-Lorena</b> e pagou 5 bilhões de francos de indenização. Em Paris, a derrota gerou a <b>Comuna</b> (1871), governo popular esmagado pelo exército francês.</td></tr>
+  </table>
+  <p>Em <b>18 de janeiro de 1871</b>, no Salão dos Espelhos do Palácio de <b>Versalhes</b>, Guilherme I foi proclamado imperador (<i>Kaiser</i>) do <b>Império Alemão</b>. A humilhação francesa seria lembrada: em 1919, o Tratado de Versalhes foi assinado no mesmo salão (aula hg-15).</p>
+  <div class="box box-debate"><span class="rot">Gênio de Bismarck ou força da economia?</span>A narrativa tradicional atribui a unificação ao talento de Bismarck, que teria planejado cada passo. Historiadores posteriores destacam fatores estruturais: o Zollverein, as ferrovias, o carvão do Ruhr e o crescimento industrial prussiano. O economista John Maynard Keynes escreveu em 1919 que o império alemão foi construído "mais sobre carvão e ferro do que sobre sangue e ferro". Hoje se vê Bismarck como um político hábil e oportunista, que aproveitou condições favoráveis — e não como alguém que seguiu um plano traçado de antemão.</div>
+  <h3>4. O Império Alemão por dentro</h3>
+  <ul>
+    <li><b>Política</b>: um império federal, com o rei da Prússia como imperador e um Parlamento (<i>Reichstag</i>) eleito por voto universal masculino — mas o chanceler respondia ao imperador, não ao Parlamento.</li>
+    <li><b>Kulturkampf</b> ("luta cultural", 1871–1878): Bismarck perseguiu a Igreja Católica, vista como ameaça à unidade; recuou diante da resistência do Partido do Centro católico.</li>
+    <li><b>Socialistas e seguro social</b>: Bismarck proibiu organizações socialistas (1878–1890), mas, para tirar força delas, criou o primeiro sistema de <b>seguro social obrigatório</b> do mundo: saúde (1883), acidentes de trabalho (1884) e aposentadoria por invalidez e velhice (1889). A estratégia de "cenoura e chicote" não impediu que o Partido Social-Democrata se tornasse o maior da Alemanha em 1912.</li>
+    <li><b>Potência industrial</b>: na <b>Segunda Revolução Industrial</b>, a Alemanha liderou a química (BASF, Bayer — a aspirina é de 1899), a eletricidade (Siemens, AEG) e o aço (Krupp), apoiada em universidades e laboratórios de pesquisa. Antes de 1914, já ultrapassava o Reino Unido na produção de aço.</li>
+  </ul>
+  <h3>5. Do equilíbrio de Bismarck à guerra</h3>
+  <p>Depois de 1871, Bismarck quis manter a paz para consolidar o império e isolar a França, que desejava recuperar a Alsácia-Lorena. Montou uma rede de alianças: a Liga dos Três Imperadores (1873), a <b>Tríplice Aliança</b> com Áustria-Hungria e Itália (1882) e um tratado secreto com a Rússia (1887). Presidiu a Conferência de Berlim sobre a África (1884–1885, aula hg-14).</p>
+  <p>Em 1890, o jovem imperador <b>Guilherme II</b> demitiu Bismarck e adotou a <i>Weltpolitik</i> ("política mundial"): colônias, prestígio e uma grande marinha de guerra, que iniciou uma <b>corrida naval</b> com o Reino Unido. O tratado com a Rússia não foi renovado, e a Rússia se aliou à França (1894); o Reino Unido aproximou-se de ambas, formando a <b>Tríplice Entente</b> (1907). A Europa estava dividida em dois blocos — o cenário da Primeira Guerra (aula hg-15).</p>
+  <div class="box box-debate"><span class="rot">Um "caminho especial" alemão?</span>Depois do nazismo, historiadores alemães como Hans-Ulrich Wehler defenderam a tese do <i>Sonderweg</i> ("caminho especial"): a Alemanha teria se modernizado economicamente sem se democratizar, mantendo no poder uma elite militar e aristocrática autoritária — o que explicaria Hitler. Nos anos 1980, os britânicos David Blackbourn e Geoff Eley contestaram: não existia um caminho "normal" de modernização com o qual comparar, a burguesia alemã era forte e a sociedade do império era mais dinâmica e plural do que a tese supunha. O debate mostra o risco de ler toda a história de um país a partir de seu pior momento.</div>`,
+  linhaTempo:[
+    ['1814–1815','Congresso de Viena; Confederação Germânica; Reino Unido de Portugal, Brasil e Algarves (1815).'],
+    ['1817','Leopoldina da Áustria chega ao Brasil casada com D. Pedro.'],
+    ['1824','Fundação de São Leopoldo (RS), marco da imigração alemã.'],
+    ['1834','Criação do Zollverein.'],
+    ['1848–1849','Parlamento de Frankfurt; fracasso da unificação liberal.'],
+    ['1862','Bismarck torna-se primeiro-ministro da Prússia.'],
+    ['1864','Guerra contra a Dinamarca.'],
+    ['1866','Guerra contra a Áustria (Sadowa).'],
+    ['1870–1871','Guerra Franco-Prussiana; Sedan; Comuna de Paris.'],
+    ['18/1/1871','Proclamação do Império Alemão em Versalhes.'],
+    ['1871–1878','Kulturkampf.'],
+    ['1882','Tríplice Aliança.'],
+    ['1883–1889','Leis de seguro social de Bismarck.'],
+    ['1890','Guilherme II demite Bismarck.'],
+    ['1907','Formação da Tríplice Entente.'],
+    ['1914','Início da Primeira Guerra Mundial.']
+  ],
+  conceitos:[
+    ['Congresso de Viena','Conferência de 1814–1815 que reorganizou a Europa após Napoleão.'],
+    ['Equilíbrio de poder','Arranjo em que nenhuma potência consegue dominar as demais.'],
+    ['Zollverein','União aduaneira dos Estados alemães liderada pela Prússia (1834).'],
+    ['Junker','Nobre proprietário de terras da Prússia.'],
+    ['Kulturkampf','Conflito de Bismarck com a Igreja Católica (1871–1878).'],
+    ['Seguro social','Sistema obrigatório de proteção contra doença, acidente e velhice, criado por Bismarck.'],
+    ['Weltpolitik','Política de expansão mundial de Guilherme II.'],
+    ['Sonderweg','Tese do "caminho especial" alemão rumo ao autoritarismo.']
+  ],
+  mitos:[
+    ['A Alemanha existe como país há muitos séculos.','Só se unificou como Estado em 1871; antes, havia dezenas de Estados de língua alemã.'],
+    ['Bismarck seguiu um plano detalhado desde o início.','Foi um político oportunista, que aproveitou circunstâncias favoráveis; a estrutura econômica pesou muito.'],
+    ['A previdência social foi criada por governos socialistas.','O primeiro sistema obrigatório foi criado pelo conservador Bismarck, justamente para enfraquecer os socialistas.']
+  ],
+  ceara:`<p>A invenção de Bismarck chegou ao Brasil décadas depois. A <b>Lei Eloy Chaves</b> (1923) criou as Caixas de Aposentadorias e Pensões dos ferroviários — considerada o marco inicial da previdência social brasileira, que evoluiu até o atual INSS. No Ceará, onde a aposentadoria rural e os benefícios do INSS movimentam a economia de muitos municípios do interior, essa história tem efeito direto no comércio local (aula gb-16).</p>
+  <p>A imigração alemã concentrou-se no Sul do país e quase não chegou ao Ceará — mas o Congresso de Viena, ao reconhecer o Reino Unido de Portugal, Brasil e Algarves (1815), mudou o estatuto de todas as capitanias, inclusive a do Ceará, na véspera da Independência.</p>`,
+  resumo:[
+    'O Congresso de Viena (1815) restaurou dinastias e criou um equilíbrio de poder; a "Alemanha" era uma confederação de 39 Estados.',
+    'O Zollverein (1834) unificou a economia antes da política; a unificação liberal de 1848 fracassou.',
+    'Bismarck unificou a Alemanha por três guerras (1864, 1866, 1870–1871); o império foi proclamado em Versalhes em 1871.',
+    'O império combinou voto universal masculino com governo autoritário, perseguiu católicos e socialistas e criou o primeiro seguro social.',
+    'A Alemanha liderou a Segunda Revolução Industrial.',
+    'A política de Guilherme II rompeu o equilíbrio de Bismarck e dividiu a Europa em blocos.'
+  ],
+  links:[
+    {tipo:'busca', nome:'Unificação alemã — Bismarck — aula', url:'https://www.youtube.com/results?search_query=unifica%C3%A7%C3%A3o+alem%C3%A3+Bismarck+aula+hist%C3%B3ria', desc:'Aulas sobre a formação do Império Alemão.'},
+    {tipo:'busca', nome:'Congresso de Viena', url:'https://www.youtube.com/results?search_query=Congresso+de+Viena+1815+aula+Santa+Alian%C3%A7a', desc:'Vídeos sobre a reorganização da Europa pós-Napoleão.'},
+    {tipo:'busca', nome:'Imigração alemã no Brasil', url:'https://www.youtube.com/results?search_query=imigra%C3%A7%C3%A3o+alem%C3%A3+no+Brasil+hist%C3%B3ria+S%C3%A3o+Leopoldo+1824', desc:'Documentários sobre os imigrantes alemães.'}
+  ]
+},
+
+'hg-36': {
+  tags:'japão feudal samurais xogunato kamakura invasões mongóis kamikaze período sengoku portugueses no japão tanegashima francisco xavier nanban oda nobunaga toyotomi hideyoshi tokugawa ieyasu sekigahara xogunato tokugawa edo sakoku dejima rangaku perry navios negros tratados desiguais restauração meiji guerra boshin carta de juramento fim dos samurais rebelião de satsuma missão iwakura país rico exército forte constituição meiji 1889 zaibatsu guerra sino-japonesa guerra russo-japonesa tsushima anexação da coreia kasato maru imigração japonesa shindo renmei',
+  objetivo:`Ao final, você vai saber explicar como era o Japão dos <b>samurais</b> e do <b>xogunato Tokugawa</b>, por que o país se fechou ao exterior no século XVII, como a chegada dos navios americanos (1853) levou à <b>Restauração Meiji</b> (1868) e como, em poucas décadas, o Japão se modernizou, virou potência imperialista — e se ligou ao Brasil pela imigração.`,
+  porque:`<p>O Japão foi o único país não ocidental a se industrializar e a se tornar uma grande potência no século XIX, escapando da colonização. Como conseguiu isso tão rápido é uma das grandes perguntas da história — e uma referência constante nos debates sobre desenvolvimento, inclusive no Brasil.</p>
+  <p>O Japão também tem laços fortes conosco: os portugueses foram os primeiros europeus a chegar lá (1543), deixando palavras na língua japonesa; e o Brasil abriga a maior comunidade de origem japonesa fora do Japão, formada a partir da chegada do navio <i>Kasato Maru</i> a Santos, em 1908.</p>`,
+  corpo:`
+  <h3>1. O Japão dos samurais</h3>
+  <p>A partir do século XII, o poder real no Japão passou do imperador, que se tornou uma figura sagrada e simbólica em Kyoto, para chefes militares. Em 1192, Minamoto no Yoritomo recebeu o título de <b>xógum</b> ("general"), inaugurando o governo militar. A sociedade era dominada pelos <b>samurais</b>, guerreiros ligados por lealdade a senhores regionais, os <b>daimiôs</b> — um arranjo que os historiadores costumam comparar ao feudalismo europeu (aula hg-05). Em 1274 e 1281, os japoneses resistiram a duas invasões mongóis (aula hg-25); tempestades que destruíram as frotas inimigas foram chamadas de <i>kamikaze</i>, "vento divino".</p>
+  <p>Entre meados do século XV e o fim do XVI, o país viveu o <b>período Sengoku</b> ("país em guerra"), com daimiôs lutando entre si.</p>
+  <h3>2. Os portugueses e o "século cristão"</h3>
+  <p>Em <b>1543</b>, comerciantes portugueses chegaram à ilha de Tanegashima, trazendo arcabuzes que os japoneses logo copiaram em grande escala. Em 1549, o jesuíta <b>Francisco Xavier</b> começou a missão cristã; chegou a haver talvez 300 mil cristãos japoneses. O porto de Nagasaki tornou-se centro do comércio português entre Macau e o Japão, trocando seda chinesa por prata japonesa. Os japoneses chamaram os europeus de <i>nanban</i> ("bárbaros do sul") e os retrataram em biombos coloridos. Palavras portuguesas entraram no japonês: <i>pan</i> (pão), <i>botan</i> (botão), <i>kasutera</i> (pão de ló "de Castela").</p>
+  <p>Três líderes reunificaram o país: Oda Nobunaga, Toyotomi Hideyoshi (que invadiu a Coreia em 1592–1598) e <b>Tokugawa Ieyasu</b>, vencedor da batalha de Sekigahara (1600) e xógum a partir de 1603.</p>
+  <h3>3. O xogunato Tokugawa e o "país fechado" (1603–1868)</h3>
+  <ul>
+    <li><b>Paz e controle</b>: com capital em <b>Edo</b> (atual Tóquio), os Tokugawa garantiram mais de 250 anos de paz. Os daimiôs eram obrigados a passar anos alternados em Edo e deixar a família lá como garantia de lealdade — o que fez de Edo, por volta de 1720, uma das maiores cidades do mundo, com cerca de 1 milhão de habitantes.</li>
+    <li><b>Sociedade de estamentos</b>: samurais (cerca de 6% a 7% da população), camponeses, artesãos e comerciantes, nessa ordem de prestígio. Na prática, os comerciantes enriqueceram, e a cultura urbana floresceu: teatro kabuki, gravuras <i>ukiyo-e</i> (como <i>A Grande Onda</i>, de Hokusai), alfabetização relativamente alta.</li>
+    <li><b><i>Sakoku</i></b> ("país fechado"): temendo a influência estrangeira e a ligação entre missionários e potências coloniais, o xogunato proibiu o cristianismo (1614), reprimiu a rebelião cristã de Shimabara (1637–1638) e <b>expulsou os portugueses</b> (1639). Só os holandeses, que não faziam proselitismo, puderam comerciar, confinados na ilhota artificial de <b>Dejima</b>, em Nagasaki, além dos chineses e de contatos com a Coreia. Pelos livros holandeses, estudiosos japoneses acompanharam a ciência europeia — os "estudos holandeses" (<i>rangaku</i>).</li>
+  </ul>
+  <h3>4. Os navios negros e a crise (1853–1868)</h3>
+  <p>Em 1853, o comodoro americano <b>Matthew Perry</b> entrou na baía de Edo com navios a vapor armados — os "navios negros" — exigindo a abertura dos portos. Os japoneses sabiam o que acontecera com a China nas Guerras do Ópio (aula hg-14). Em 1854 e 1858, o xogunato assinou <b>tratados desiguais</b> com os EUA e as potências europeias: portos abertos, tarifas fixadas de fora e <b>extraterritorialidade</b> (estrangeiros julgados por seus próprios cônsules).</p>
+  <p>A humilhação desmoralizou o xogunato. Samurais dos domínios de <b>Satsuma</b> e <b>Chōshū</b>, primeiro sob o lema "reverenciar o imperador, expulsar os bárbaros", perceberam que não podiam vencer o Ocidente militarmente e passaram a defender a modernização. Na <b>Guerra Boshin</b> (1868–1869), derrubaram o xógum e "restauraram" o poder do jovem imperador <b>Mutsuhito</b>, cujo reinado recebeu o nome de <b>Meiji</b> ("governo esclarecido").</p>
+  <h3>5. A Restauração Meiji: revolução de cima para baixo</h3>
+  <p>O novo governo, liderado por um pequeno grupo de ex-samurais, adotou o lema "<b>país rico, exército forte</b>" e transformou o Japão em uma geração:</p>
+  <ul>
+    <li><b>Fim do sistema feudal</b>: os domínios dos daimiôs viraram províncias (1871); os samurais perderam seus privilégios, suas pensões e o direito exclusivo de portar espadas. A <b>Rebelião de Satsuma</b> (1877), liderada por Saigō Takamori, foi a última resistência samurai, esmagada pelo novo exército de recrutas camponeses — fonte da imagem romântica do "último samurai".</li>
+    <li><b>Aprender com o Ocidente</b>: a <b>Missão Iwakura</b> (1871–1873) percorreu os EUA e a Europa estudando instituições. O Japão copiou seletivamente: marinha britânica, exército primeiro francês e depois alemão, escolas e universidades, ferrovias (a primeira em 1872), correios, telégrafo, calendário ocidental.</li>
+    <li><b>Educação</b>: ensino primário obrigatório desde 1872; no início do século XX, quase todas as crianças frequentavam a escola.</li>
+    <li><b>Economia</b>: imposto fixo sobre a terra em dinheiro para financiar o Estado, fábricas estatais (seda, algodão) vendidas depois a grupos privados — os <b><i>zaibatsu</i></b>, como Mitsui e Mitsubishi.</li>
+    <li><b>Constituição de 1889</b>, inspirada na da Prússia (aula hg-35): um imperador sagrado e soberano, um Parlamento com poderes limitados e um exército respondendo diretamente ao imperador. O xintoísmo foi transformado em culto de Estado, e a educação ensinava lealdade ao imperador.</li>
+  </ul>
+  <div class="box box-debate"><span class="rot">Por que o Japão conseguiu?</span>Os historiadores apontam vários fatores: a herança Tokugawa (alfabetização, mercado interno integrado, cidades grandes, burocracia de samurais letrados); uma elite reformista unida e disposta a sacrificar os próprios privilégios de classe; um território sem grandes riquezas que interessassem às potências; e a sorte de o Ocidente estar concentrado na China. Mas a modernização teve custos: impostos pesados sobre camponeses, revoltas reprimidas, trabalho duro de operárias nas fábricas de seda e um nacionalismo militarista que desembocaria no expansionismo dos anos 1930 e na Segunda Guerra (aulas hg-17 e hg-18).</div>
+  <h3>6. O Japão imperialista</h3>
+  <p>O Japão logo passou de ameaçado a ameaça. Venceu a China (1894–1895) e tomou <b>Taiwan</b>; aliou-se ao Reino Unido (1902); e, na <b>Guerra Russo-Japonesa</b> (1904–1905), destruiu a frota russa em <b>Tsushima</b> — a primeira vitória de um país asiático sobre uma potência europeia na era moderna, que entusiasmou nacionalistas anticoloniais da Índia ao Egito. Em 1910, anexou a <b>Coreia</b>, que governou com dureza até 1945. Em 1911, os últimos tratados desiguais foram revistos. Depois da derrota em 1945, sob ocupação americana, o Japão adotou uma Constituição pacifista (1947) e viveu um "milagre econômico" que o tornou a segunda maior economia do mundo por décadas — com métodos de produção, como o toyotismo, copiados mundo afora.</p>`,
+  linhaTempo:[
+    ['1192','Primeiro xogunato (Kamakura).'],
+    ['1274 e 1281','Invasões mongóis repelidas.'],
+    ['c. 1467–1590','Período Sengoku (guerras civis).'],
+    ['1543','Portugueses chegam a Tanegashima.'],
+    ['1549','Francisco Xavier inicia a missão jesuíta.'],
+    ['1600–1603','Batalha de Sekigahara; início do xogunato Tokugawa.'],
+    ['1614','Proibição do cristianismo.'],
+    ['1639','Expulsão dos portugueses; política de sakoku.'],
+    ['1853–1854','Chegada de Perry e Tratado de Kanagawa.'],
+    ['1858','Tratados desiguais com as potências.'],
+    ['1868','Restauração Meiji.'],
+    ['1871','Fim dos domínios feudais; Missão Iwakura (1871–1873).'],
+    ['1877','Rebelião de Satsuma.'],
+    ['1889','Constituição Meiji.'],
+    ['1894–1895','Guerra Sino-Japonesa.'],
+    ['1904–1905','Guerra Russo-Japonesa.'],
+    ['18/6/1908','Chegada do Kasato Maru a Santos.'],
+    ['1910','Anexação da Coreia.']
+  ],
+  conceitos:[
+    ['Xógum','Chefe militar que governava o Japão em nome do imperador.'],
+    ['Daimiô','Grande senhor territorial japonês.'],
+    ['Samurai','Guerreiro a serviço de um daimiô; depois, também funcionário letrado.'],
+    ['Sakoku','Política de restrição dos contatos externos do Japão Tokugawa.'],
+    ['Tratados desiguais','Acordos impostos pelas potências ocidentais a países asiáticos no século XIX.'],
+    ['Extraterritorialidade','Direito de estrangeiros serem julgados por seus próprios tribunais em outro país.'],
+    ['Restauração Meiji','Derrubada do xogunato e modernização do Japão a partir de 1868.'],
+    ['Zaibatsu','Grandes conglomerados familiares japoneses, como Mitsui e Mitsubishi.']
+  ],
+  mitos:[
+    ['A palavra japonesa "arigatô" vem do português "obrigado".','É uma coincidência: <i>arigatai</i> já existia no japonês antes da chegada dos portugueses. Mas outras palavras, como <i>pan</i> (pão), vieram mesmo do português.'],
+    ['Durante o sakoku, o Japão ficou totalmente isolado.','Manteve comércio com holandeses, chineses, coreanos e o reino de Ryukyu, e acompanhou a ciência europeia pelos livros holandeses.'],
+    ['Os samurais eram a maioria dos japoneses.','Eram cerca de 6% a 7% da população; a grande maioria era camponesa.']
+  ],
+  ceara:`<p>A imigração japonesa começou em 18 de junho de 1908, com 781 pessoas no <i>Kasato Maru</i>, para trabalhar nas fazendas de café de São Paulo. Hoje o Brasil tem a maior comunidade nipo-descendente fora do Japão, estimada em cerca de 2 milhões de pessoas, concentrada em São Paulo e no Paraná. Durante a Segunda Guerra, os imigrantes japoneses foram perseguidos, e, depois dela, a comunidade se dividiu violentamente entre os que aceitavam a derrota do Japão e os que a negavam (o grupo Shindo Renmei).</p>
+  <p>No Ceará, a presença japonesa é pequena, mas a influência econômica japonesa chegou pelas fábricas: os métodos do <b>toyotismo</b> — produção enxuta, estoque mínimo ("just in time"), controle de qualidade — são aplicados hoje em indústrias e em centros de distribuição de todo o país, e são uma referência na gestão de almoxarifados.</p>`,
+  resumo:[
+    'Do século XII ao XIX, o Japão foi governado por xóguns e samurais, com o imperador como figura sagrada.',
+    'Os portugueses chegaram em 1543, trazendo armas de fogo e o cristianismo; o xogunato Tokugawa proibiu o cristianismo e fechou o país (sakoku).',
+    'A chegada de Perry (1853) e os tratados desiguais levaram à queda do xogunato e à Restauração Meiji (1868).',
+    'O governo Meiji aboliu o feudalismo, copiou instituições ocidentais e industrializou o país em uma geração.',
+    'O Japão venceu China (1895) e Rússia (1905) e anexou a Coreia (1910), tornando-se potência imperialista.',
+    'A imigração japonesa para o Brasil começou em 1908.'
+  ],
+  links:[
+    {tipo:'busca', nome:'Restauração Meiji — aula', url:'https://www.youtube.com/results?search_query=Restaura%C3%A7%C3%A3o+Meiji+aula+hist%C3%B3ria+Jap%C3%A3o', desc:'Aulas sobre a modernização japonesa.'},
+    {tipo:'busca', nome:'Portugueses no Japão — século cristão', url:'https://www.youtube.com/results?search_query=portugueses+no+Jap%C3%A3o+s%C3%A9culo+XVI+nanban+hist%C3%B3ria', desc:'Vídeos sobre os contatos luso-japoneses.'},
+    {tipo:'busca', nome:'Kasato Maru e a imigração japonesa no Brasil', url:'https://www.youtube.com/results?search_query=Kasato+Maru+imigra%C3%A7%C3%A3o+japonesa+no+Brasil+document%C3%A1rio', desc:'Documentários sobre os imigrantes japoneses.'}
+  ]
+},
+
+'hg-37': {
+  tags:'história do comércio mundial vantagem comparativa adam smith david ricardo vinho e tecido fenícios moeda lídia rota da seda muziris liga hanseática feiras de champagne letra de câmbio banco medici companhia das índias orientais holandesa voc bolsa de amsterdã mercantilismo revogação das leis dos cereais tratado cobden-chevalier padrão-ouro canal de suez cabo telegráfico primeira globalização smoot-hawley desglobalização gatt contêiner malcolm mclean china na omc cadeias globais de valor desglobalização tarifas de 2025 friedrich list indústria nascente chutando a escada porto do pecém',
+  objetivo:`Ao final, você vai saber explicar como o comércio entre povos distantes evoluiu ao longo de cinco mil anos — das caravanas e navios antigos às companhias de comércio, à "primeira globalização" do século XIX, ao colapso dos anos 1930 e à era dos contêineres e das cadeias globais —, e por que a disputa entre <b>livre comércio</b> e <b>protecionismo</b> volta sempre.`,
+  porque:`<p>Quase tudo o que você usa — o celular, a roupa, o combustível, o trigo do pão — atravessou oceanos antes de chegar até você. E o que o Ceará produz — aço, frutas, castanha, calçados, pescado — sai pelo Porto do Pecém para outros países. Entender como o comércio mundial se formou ajuda a entender empregos, preços e até guerras.</p>
+  <p>Esta aula funciona como uma síntese: retoma temas de várias aulas (Rotas da Seda, navegações, tráfico atlântico, Revolução Industrial, Bretton Woods, globalização) e os amarra numa única história de longa duração.</p>`,
+  corpo:`
+  <h3>1. Por que os povos comerciam?</h3>
+  <p>Porque nenhum lugar tem tudo, e porque a especialização aumenta a produção. Em <i>A riqueza das nações</i> (1776), <b>Adam Smith</b> mostrou que a divisão do trabalho torna todos mais produtivos. Em 1817, <b>David Ricardo</b> foi além com a teoria da <b>vantagem comparativa</b>, usando justamente o exemplo de Portugal e Inglaterra: mesmo que Portugal produzisse vinho e tecido com menos trabalho que a Inglaterra, valeria a pena para os dois que Portugal se especializasse no vinho e a Inglaterra no tecido, e trocassem. (O exemplo não era por acaso: era o comércio do Tratado de Methuen, aula hg-09.)</p>
+  <div class="box box-analogia"><span class="rot">Analogia</span>Imagine um almoxarife que organiza o estoque melhor do que qualquer um e também digita mais rápido que o auxiliar. Mesmo assim, compensa que ele cuide do planejamento e deixe a digitação com o auxiliar: cada um faz aquilo em que sua vantagem relativa é maior, e o setor inteiro produz mais. Isso é vantagem comparativa. O problema, como veremos, é que "especializar-se em vinho" ou "em café" pode deixar um país para sempre na parte menos lucrativa da troca.</div>
+  <h3>2. O comércio antigo e medieval</h3>
+  <ul>
+    <li><b>Antiguidade</b>: há mais de 4 mil anos, a Mesopotâmia trocava mercadorias com o vale do Indo; os <b>fenícios</b> criaram uma rede de portos no Mediterrâneo; a <b>moeda</b> cunhada surgiu na Lídia (Anatólia) por volta de 600 a.C.; mercadores romanos compravam pimenta em portos indianos como Muziris; as <b>Rotas da Seda</b> ligavam a China ao Mediterrâneo (aulas hg-25 e hg-33).</li>
+    <li><b>Idade Média</b>: o Oceano Índico era o grande mercado do mundo (aula hg-25); caravanas cruzavam o Saara com ouro e sal (aula hg-26); no Mediterrâneo, Veneza e Gênova dominavam; no norte da Europa, a <b>Liga Hanseática</b> uniu cidades mercantis do Báltico e do Mar do Norte; as <b>feiras de Champagne</b> reuniam mercadores de toda a Europa.</li>
+    <li><b>Inovações financeiras</b>: a <b>letra de câmbio</b> (permitia pagar em outra cidade sem carregar moedas), a contabilidade de partidas dobradas e os bancos italianos, como o dos Médici, em Florença. Muitas dessas técnicas tinham paralelos no mundo islâmico — a palavra "cheque" tem origem provável no árabe <i>sakk</i>, vindo do persa.</li>
+  </ul>
+  <h3>3. A era das companhias e do mercantilismo (séculos XVI–XVIII)</h3>
+  <p>As navegações (aula hg-08) ligaram pela primeira vez todos os continentes. A prata americana circulou até a China; o açúcar, o tabaco e o algodão foram produzidos por africanos escravizados (aula hg-28); especiarias e tecidos asiáticos chegaram à Europa. Surgiram as grandes <b>companhias de comércio</b>, com privilégios dos Estados, exércitos próprios e acionistas: a Companhia Britânica das Índias Orientais (1600) e a <b>Companhia Holandesa das Índias Orientais</b> (VOC, 1602), a primeira a vender ações negociáveis numa bolsa, a de Amsterdã. A Companhia das Índias Ocidentais holandesa ocupou o Nordeste brasileiro de 1630 a 1654. A política dominante era o <b>mercantilismo</b> (aula hg-09): exportar mais do que importar e acumular metais.</p>
+  <h3>4. A "primeira globalização" (c. 1840–1914)</h3>
+  <p>No século XIX, o Reino Unido, potência industrial, adotou o <b>livre comércio</b>: aboliu as tarifas sobre cereais em 1846 e firmou com a França o Tratado Cobden-Chevalier (1860). Ao mesmo tempo, os custos de transporte e comunicação despencaram:</p>
+  <ul>
+    <li>navios a vapor e, depois, navios frigoríficos (que permitiram exportar carne da Argentina e do Uruguai);</li>
+    <li>ferrovias ligando o interior aos portos — como as do café em São Paulo;</li>
+    <li>o <b>Canal de Suez</b> (1869), que encurtou a viagem Europa–Ásia;</li>
+    <li>o cabo telegráfico transatlântico (1866): notícias e ordens de compra cruzando o oceano em minutos;</li>
+    <li>o <b>padrão-ouro</b>, que dava previsibilidade ao câmbio, e a livre circulação de capitais e de pessoas — cerca de 50 milhões de europeus emigraram para as Américas.</li>
+  </ul>
+  <p>Foi o auge do Brasil exportador de café e de borracha. Mas o livre comércio também foi imposto pela força, como nas Guerras do Ópio contra a China e nos tratados desiguais (aulas hg-14 e hg-36).</p>
+  <h3>5. O colapso (1914–1945)</h3>
+  <p>A Primeira Guerra quebrou essa ordem. Com a crise de 1929 (aula hg-17), os países ergueram barreiras: a tarifa Smoot-Hawley (EUA, 1930) provocou retaliações, e o valor do comércio mundial caiu cerca de dois terços entre 1929 e 1934. Cada país tentou salvar seus empregos fechando o mercado — e todos ficaram mais pobres. Muitos economistas veem nessa "desglobalização" um dos caminhos que levaram ao fascismo e à guerra.</p>
+  <h3>6. Do GATT aos contêineres (1945–2008)</h3>
+  <p>Os vencedores de 1945 criaram regras para evitar a repetição dos anos 1930: o sistema de Bretton Woods e o <b>GATT</b> (1947), que em sucessivas rodadas de negociação reduziu as tarifas industriais (aula hg-30), transformado na OMC em 1995. Uma invenção simples completou a revolução: o <b>contêiner</b>. Em 1956, o empresário americano Malcolm McLean despachou o primeiro navio com caixas de aço padronizadas, que passavam do caminhão para o navio sem serem abertas. O custo e o tempo de embarque despencaram, os roubos nos portos diminuíram, e passou a valer a pena produzir cada peça de um produto num país diferente. Nasciam as <b>cadeias globais de valor</b> (aula gg-07).</p>
+  <p>O Japão, depois Coreia do Sul, Taiwan, Hong Kong e Singapura, cresceram exportando manufaturas. Com a entrada da <b>China na OMC</b> (2001), o país se tornou a "fábrica do mundo" e o maior exportador do planeta. O comércio mundial cresceu muito mais rápido que a produção até a crise de 2008.</p>
+  <h3>7. O século XXI: freio e disputa</h3>
+  <p>Depois de 2008, o comércio parou de crescer mais que a economia — alguns falam em "<b>desaceleração da globalização</b>". A guerra comercial entre EUA e China (a partir de 2018), a pandemia (que expôs a dependência de máscaras e chips importados), as sanções contra a Rússia (2022) e os ataques a navios no Mar Vermelho mostraram a fragilidade das cadeias longas. Em 2025, o governo Trump impôs tarifas amplas a quase todos os parceiros, incluindo uma sobretaxa sobre parte dos produtos brasileiros. Empresas e governos passaram a falar em produzir mais perto (<i>nearshoring</i>) ou em países aliados (<i>friendshoring</i>), e a usar o comércio como arma geopolítica (aula gg-17).</p>
+  <div class="box box-debate"><span class="rot">Livre comércio ou protecionismo?</span>Para os seguidores de Smith e Ricardo, o livre comércio aumenta a riqueza de todos, e o protecionismo protege poucos à custa dos consumidores. Do outro lado, o americano Alexander Hamilton (1791) e o alemão <b>Friedrich List</b> (1841) defenderam proteger a "<b>indústria nascente</b>" até que ela pudesse competir. O economista sul-coreano Ha-Joon Chang (<i>Chutando a escada</i>, 2002) mostrou que Reino Unido e EUA se industrializaram com tarifas altas e só passaram a pregar o livre comércio depois de ricos — "chutando a escada" que tinham usado para subir. Críticos respondem que muitos países que se protegeram por muito tempo, como o Brasil e a Argentina, criaram indústrias pouco competitivas, enquanto os tigres asiáticos protegeram, mas obrigaram suas empresas a exportar. O debate voltou com força com as tarifas dos anos 2020.</div>`,
+  linhaTempo:[
+    ['c. 2300 a.C.','Comércio entre a Mesopotâmia e o vale do Indo.'],
+    ['c. 600 a.C.','Primeiras moedas cunhadas, na Lídia.'],
+    ['Séc. II a.C.','Início das Rotas da Seda.'],
+    ['Séc. XIII–XV','Liga Hanseática; feiras de Champagne; bancos italianos.'],
+    ['1498','Vasco da Gama chega à Índia.'],
+    ['1602','Fundação da Companhia Holandesa das Índias Orientais (VOC).'],
+    ['1776 e 1817','Adam Smith e David Ricardo.'],
+    ['1846','Reino Unido abole as tarifas sobre cereais.'],
+    ['1866 e 1869','Cabo telegráfico transatlântico; Canal de Suez.'],
+    ['1930','Tarifa Smoot-Hawley nos EUA.'],
+    ['1929–1934','O valor do comércio mundial cai cerca de dois terços.'],
+    ['1947','GATT.'],
+    ['1956','Primeiro navio de contêineres de Malcolm McLean.'],
+    ['1995','Criação da OMC.'],
+    ['2001','China entra na OMC.'],
+    ['2008','Crise financeira; o comércio deixa de crescer acima da economia.'],
+    ['2018','Início da guerra comercial EUA–China.'],
+    ['2025','Tarifas amplas dos EUA contra quase todos os parceiros.']
+  ],
+  conceitos:[
+    ['Vantagem comparativa','Teoria de Ricardo: cada país ganha ao se especializar no que produz com menor custo relativo.'],
+    ['Letra de câmbio','Documento que permitia pagamentos em outra cidade sem transportar moedas.'],
+    ['Companhia de comércio','Empresa com privilégios do Estado para explorar o comércio de uma região (como a VOC).'],
+    ['Primeira globalização','Período de intensa integração comercial e financeira entre c. 1840 e 1914.'],
+    ['Contêiner','Caixa metálica padronizada que revolucionou o transporte marítimo a partir de 1956.'],
+    ['Indústria nascente','Argumento de List: proteger uma indústria nova até que possa competir.'],
+    ['Nearshoring / friendshoring','Trazer a produção para países próximos ou aliados.']
+  ],
+  mitos:[
+    ['A globalização começou nos anos 1990.','Houve uma "primeira globalização" no século XIX, e redes de comércio intercontinental existem há milênios.'],
+    ['Os países ricos enriqueceram com livre comércio desde o início.','Reino Unido e EUA usaram tarifas altas na fase de industrialização.'],
+    ['O protecionismo sempre protege os empregos do país.','Pode proteger alguns setores, mas encarece produtos, provoca retaliações e, nos anos 1930, ajudou a aprofundar a crise.']
+  ],
+  ceara:`<p>O Ceará entrou na era dos contêineres com o <b>Porto do Pecém</b>, em São Gonçalo do Amarante, inaugurado em 2002. O Complexo do Pecém, que tem o Porto de Roterdã (Países Baixos) como sócio desde 2018, abriga uma Zona de Processamento de Exportação (ZPE), uma siderúrgica que exporta placas de aço, e projetos de hidrogênio verde voltados ao mercado europeu. Pelo Pecém e pelo Porto do Mucuripe saem placas de aço, frutas, castanha de caju, calçados, pescado e lagosta.</p>
+  <p>Isso torna o estado sensível às disputas comerciais: os Estados Unidos estão entre os principais destinos das exportações cearenses, e as tarifas americanas de 2025 preocuparam exportadores de aço, pescado, castanha e frutas. A história de 5 mil anos de comércio chega, assim, ao cais do Pecém.</p>`,
+  resumo:[
+    'A especialização e a vantagem comparativa (Smith, Ricardo) explicam por que os povos comerciam.',
+    'Rotas antigas e medievais — Mediterrâneo, Rotas da Seda, Índico, Saara, Hansa — já ligavam boa parte do mundo; letra de câmbio e bancos facilitaram as trocas.',
+    'As navegações e as companhias de comércio (VOC) criaram uma economia atlântica e asiática ligada pela prata e pela escravidão.',
+    'Vapor, Suez, telégrafo e padrão-ouro criaram a "primeira globalização" (c. 1840–1914).',
+    'Guerras e protecionismo derrubaram o comércio nos anos 1930.',
+    'GATT, contêiner e China na OMC criaram as cadeias globais; desde 2008, a globalização desacelera e o comércio vira arma geopolítica.',
+    'Livre comércio e protecionismo são debatidos desde Hamilton, List e Ricardo.'
+  ],
+  links:[
+    {tipo:'busca', nome:'História do comércio mundial', url:'https://www.youtube.com/results?search_query=hist%C3%B3ria+do+com%C3%A9rcio+mundial+globaliza%C3%A7%C3%A3o+explica%C3%A7%C3%A3o', desc:'Vídeos sobre a longa história das trocas.'},
+    {tipo:'busca', nome:'Como o contêiner mudou o mundo', url:'https://www.youtube.com/results?search_query=como+o+cont%C3%AAiner+mudou+o+mundo+Malcolm+McLean', desc:'Vídeos sobre a revolução do transporte marítimo.'},
+    {tipo:'busca', nome:'Vantagem comparativa de David Ricardo', url:'https://www.youtube.com/results?search_query=vantagem+comparativa+David+Ricardo+explica%C3%A7%C3%A3o', desc:'Aulas de economia sobre a teoria.'}
+  ]
+},
+
+'gg-12': {
+  tags:'geografia política estado nação estado-nação território soberania convenção de montevidéu 1933 paz de vestfália comunidades imaginadas benedict anderson estado plurinacional nações sem estado curdos fronteira limite faixa de fronteira disputas territoriais caxemira taiwan essequibo malvinas saara ocidental antártida tratado antártico estados com reconhecimento limitado ratzel mackinder heartland mahan spykman golbery geopolítica brasileira litígio ceará piauí',
+  objetivo:`Ao final, você vai saber diferenciar <b>Estado</b>, <b>nação</b>, <b>território</b> e <b>soberania</b>, explicar o que são fronteiras e limites, reconhecer os principais tipos de <b>disputas territoriais</b> do mundo atual e conhecer os grandes autores da <b>geopolítica</b> clássica — inclusive os brasileiros.`,
+  porque:`<p>Quase todos os conflitos do noticiário envolvem as mesmas perguntas: quem manda num território? Quem decide onde passa uma fronteira? Um povo tem direito a um Estado próprio? A Ucrânia, Taiwan, a Palestina, os curdos e a Venezuela reivindicando o Essequibo são, no fundo, disputas sobre Estado, nação e território.</p>
+  <p>Esses conceitos também valem dentro do Brasil: o Ceará e o Piauí disputam há mais de um século uma faixa da Serra da Ibiapaba, e a decisão está nas mãos do Supremo Tribunal Federal. Esta é a aula de base do módulo de geopolítica.</p>`,
+  corpo:`
+  <h3>1. Estado, nação, território e soberania</h3>
+  <table class="dados">
+    <tr><th>Conceito</th><th>O que é</th></tr>
+    <tr><td><b>Estado</b></td><td>Organização política que exerce o poder sobre uma população num território. A Convenção de Montevidéu (1933) definiu quatro requisitos: população permanente, território definido, governo e capacidade de manter relações com outros Estados. Na prática, o <b>reconhecimento</b> pelos outros países também pesa.</td></tr>
+    <tr><td><b>Nação</b></td><td>Grupo humano que se vê como comunidade com história, cultura, língua ou destino comuns. O historiador Benedict Anderson a chamou de "<b>comunidade imaginada</b>": ninguém conhece todos os membros da sua nação, mas se sente ligado a eles — pela escola, pelos jornais, pelos símbolos.</td></tr>
+    <tr><td><b>Território</b></td><td>Espaço apropriado e controlado por um poder. Inclui solo, subsolo, águas e espaço aéreo.</td></tr>
+    <tr><td><b>Soberania</b></td><td>Poder supremo do Estado dentro do território (soberania interna) e independência diante dos outros Estados (soberania externa).</td></tr>
+  </table>
+  <p>Quando Estado e nação coincidem, fala-se em <b>Estado-nação</b>, modelo que se espalhou a partir das revoluções do século XVIII e XIX (aulas hg-11 e hg-14). Mas a coincidência é rara:</p>
+  <ul>
+    <li><b>Estados plurinacionais</b> reúnem várias nações: a Bolívia se define assim na Constituição de 2009; Espanha (com catalães e bascos), Reino Unido (ingleses, escoceses, galeses, norte-irlandeses), Bélgica, Índia e Rússia também abrigam várias.</li>
+    <li><b>Nações sem Estado</b>: os <b>curdos</b> (30 a 40 milhões de pessoas divididas entre Turquia, Irã, Iraque e Síria), os palestinos (cujo Estado é reconhecido por mais de três quartos dos países da ONU, mas não controla plenamente seu território), os tibetanos, os uigures, os bascos e os catalães (estes com grande autonomia).</li>
+    <li><b>Estados de reconhecimento limitado</b>: Taiwan, Kosovo, Saara Ocidental, Somalilândia — controlam (ou reivindicam) territórios, mas não são aceitos por todos.</li>
+  </ul>
+  <p>A ONU tem <b>193 Estados-membros</b> e dois observadores (Santa Sé e Palestina).</p>
+  <div class="box box-debate"><span class="rot">O mito de Vestfália?</span>Os manuais costumam dizer que o sistema de Estados soberanos nasceu com a <b>Paz de Vestfália</b> (1648), que encerrou a Guerra dos Trinta Anos. Historiadores das relações internacionais, como Andreas Osiander, mostraram que os tratados não falavam em soberania nesses termos e que o Sacro Império continuou existindo por mais 150 anos. O Estado soberano moderno foi se formando aos poucos, entre os séculos XVI e XIX — e, para a maior parte do mundo, só chegou com a descolonização do século XX (aula hg-20). Hoje, há quem diga que a globalização e as organizações internacionais estão "esvaziando" a soberania; outros apontam que os Estados nunca foram tão fortes, como mostraram a pandemia e as guerras recentes.</div>
+  <h3>2. Fronteiras e limites</h3>
+  <p>Na geografia brasileira, costuma-se distinguir o <b>limite</b> (a linha que separa dois territórios, traçada num mapa ou num tratado) da <b>fronteira</b> (a faixa de terra em torno dessa linha, com circulação de pessoas, comércio, contrabando e culturas misturadas). O Brasil define como <b>faixa de fronteira</b> os 150 km a partir dos limites terrestres, com regras especiais de segurança.</p>
+  <ul>
+    <li>Fronteiras chamadas de "naturais" (rios, montanhas) e "artificiais" (linhas retas, paralelos) são todas, no fundo, escolhas humanas: um rio pode unir tanto quanto separa.</li>
+    <li>Muitas fronteiras da África e do Oriente Médio foram traçadas por europeus (aulas hg-14 e hg-32).</li>
+    <li>O Brasil tem cerca de 17 mil km de fronteira terrestre com dez países e não tem conflitos de fronteira ativos com eles: os limites foram fixados, em grande parte, por negociação e arbitragem no tempo do <b>Barão do Rio Branco</b> (aula gb-04).</li>
+  </ul>
+  <h3>3. Disputas territoriais no mundo</h3>
+  <table class="dados">
+    <tr><th>Disputa</th><th>Quem e o quê</th></tr>
+    <tr><td><b>Caxemira</b></td><td>Índia, Paquistão e China disputam a região desde 1947; já houve várias guerras entre as duas potências nucleares, a última crise grave em 2025.</td></tr>
+    <tr><td><b>Taiwan</b></td><td>A China considera a ilha uma província rebelde; Taiwan tem governo democrático próprio desde os anos 1990 (aula hg-21).</td></tr>
+    <tr><td><b>Ucrânia</b></td><td>A Rússia anexou a Crimeia (2014) e, depois da invasão de 2022, declarou a anexação de outras quatro regiões — não reconhecidas pela grande maioria dos países (aula gg-10).</td></tr>
+    <tr><td><b>Essequibo</b></td><td>A Venezuela reivindica cerca de dois terços do território da Guiana, região rica em petróleo; o caso está na Corte Internacional de Justiça. O Brasil, vizinho dos dois, reforçou a fronteira em Roraima.</td></tr>
+    <tr><td><b>Malvinas (Falklands)</b></td><td>Argentina e Reino Unido; guerra em 1982 (aula hg-31). O Brasil apoia a reivindicação argentina de negociação.</td></tr>
+    <tr><td><b>Saara Ocidental</b></td><td>Marrocos controla a maior parte; a Frente Polisário reivindica a independência.</td></tr>
+    <tr><td><b>Mar do Sul da China</b></td><td>China, Filipinas, Vietnã, Malásia e outros disputam ilhas e águas (aula gg-16).</td></tr>
+    <tr><td><b>Antártida</b></td><td>Sete países reivindicam fatias; o <b>Tratado da Antártida</b> (1959) congelou as reivindicações e reservou o continente à ciência e à paz. O Brasil mantém ali a Estação Comandante Ferraz.</td></tr>
+  </table>
+  <h3>4. Os clássicos da geopolítica</h3>
+  <ul>
+    <li><b>Friedrich Ratzel</b> (Alemanha, fim do século XIX) via o Estado como um organismo que precisa de "espaço vital" para crescer — ideia depois distorcida pelos nazistas.</li>
+    <li><b>Alfred Mahan</b> (EUA, 1890): o poder mundial depende do <b>poder marítimo</b> — marinha, portos, rotas e bases (aula gg-16).</li>
+    <li><b>Halford Mackinder</b> (Reino Unido, 1904): quem controlasse o "<b>Heartland</b>" (o coração da Eurásia, entre a Europa Oriental e a Sibéria) dominaria o mundo.</li>
+    <li><b>Nicholas Spykman</b> (EUA, anos 1940): o decisivo é o "<b>Rimland</b>", a faixa costeira em torno da Eurásia (Europa Ocidental, Oriente Médio, Índia, China costeira) — base da estratégia americana de contenção na Guerra Fria.</li>
+    <li>No Brasil, militares como Mario Travassos e o general <b>Golbery do Couto e Silva</b> (<i>Geopolítica do Brasil</i>, 1967) pensaram a ocupação do interior e da Amazônia, a integração com os vizinhos e o papel do Brasil no Atlântico Sul. Essas ideias orientaram a construção de Brasília, as estradas da Amazônia ("integrar para não entregar") e a política externa da ditadura.</li>
+  </ul>
+  <div class="box box-analogia"><span class="rot">Analogia</span>Pense no Estado como o dono de um terreno com escritura (território e soberania), muro (limite) e calçada onde todo mundo passa (fronteira). A nação é a família que se sente "de casa" ali. Às vezes há famílias diferentes morando no mesmo terreno; às vezes uma família está espalhada por vários terrenos vizinhos; e às vezes dois vizinhos têm escrituras que não batem — e aí o caso vai parar na Justiça.</div>`,
+  conceitos:[
+    ['Estado','Organização política soberana sobre uma população e um território.'],
+    ['Nação','Comunidade que se reconhece por laços culturais e históricos ("comunidade imaginada").'],
+    ['Estado-nação','Estado cuja população se vê como uma única nação.'],
+    ['Estado plurinacional','Estado que reconhece várias nações em seu interior.'],
+    ['Soberania','Poder supremo interno e independência externa de um Estado.'],
+    ['Limite','Linha que separa dois territórios.'],
+    ['Fronteira','Faixa de contato e circulação em torno de um limite.'],
+    ['Heartland','Região central da Eurásia, segundo Mackinder.'],
+    ['Rimland','Faixa costeira da Eurásia, segundo Spykman.']
+  ],
+  mitos:[
+    ['Toda nação tem seu Estado.','Há nações sem Estado (curdos, palestinos, tibetanos) e Estados com várias nações.'],
+    ['Fronteiras naturais são "dadas" pela natureza.','Rios e montanhas só viram fronteira por decisão política; muitos povos vivem dos dois lados de um rio.'],
+    ['O Estado soberano moderno nasceu pronto em 1648.','Formou-se aos poucos; para a maioria dos países, só veio com a descolonização.']
+  ],
+  ceara:`<p>O Ceará vive uma disputa de limites dentro do próprio Brasil. O Piauí reivindica no Supremo Tribunal Federal, desde 2011, uma área de quase 3 mil km² na <b>Serra da Ibiapaba</b>, que abrange partes de 13 municípios cearenses, como Poranga, Ipueiras, Guaraciaba do Norte e Tianguá — onde vivem centenas de milhares de pessoas. O conflito vem do tempo do Império: um decreto de 1880 trocou territórios entre as duas províncias (o Ceará cedeu a região de Amarração, atual Luís Correia, e recebeu Crateús), mas a linha exata nunca foi bem demarcada. O Piauí defende o divisor de águas da serra como limite; o Ceará, a ocupação e a administração históricas. Uma perícia do Exército foi entregue ao STF em 2024, e a decisão ainda não tinha data.</p>`,
+  resumo:[
+    'Estado (organização política soberana), nação (comunidade imaginada), território e soberania são conceitos diferentes.',
+    'Há Estados plurinacionais, nações sem Estado e Estados de reconhecimento limitado; a ONU tem 193 membros.',
+    'Limite é a linha; fronteira é a faixa de contato. Toda fronteira é uma construção política.',
+    'Disputas atuais: Caxemira, Taiwan, Ucrânia, Essequibo, Malvinas, Saara Ocidental, Mar do Sul da China, Antártida.',
+    'Ratzel, Mahan, Mackinder e Spykman são os clássicos da geopolítica; Golbery pensou a geopolítica brasileira.'
+  ],
+  links:[
+    {tipo:'busca', nome:'Estado, nação e território — aula de Geografia', url:'https://www.youtube.com/results?search_query=Estado+na%C3%A7%C3%A3o+territ%C3%B3rio+soberania+aula+geografia+pol%C3%ADtica', desc:'Aulas sobre os conceitos básicos da geografia política.'},
+    {tipo:'busca', nome:'Teorias geopolíticas: Mackinder, Mahan e Spykman', url:'https://www.youtube.com/results?search_query=teorias+geopol%C3%ADticas+Mackinder+Heartland+Spykman+Rimland+Mahan', desc:'Vídeos sobre a geopolítica clássica.'},
+    {tipo:'busca', nome:'Litígio entre Ceará e Piauí', url:'https://www.youtube.com/results?search_query=lit%C3%ADgio+Cear%C3%A1+Piau%C3%AD+Serra+da+Ibiapaba+STF', desc:'Reportagens sobre a disputa de limites.'}
+  ]
+},
+
+'gg-13': {
+  tags:'teorias das relações internacionais realismo neorrealismo tucídides diálogo de melos hobbes morgenthau waltz mearsheimer realismo ofensivo anarquia internacional equilíbrio de poder dilema de segurança liberalismo kant paz perpétua wilson interdependência complexa keohane nye paz democrática construtivismo wendt teoria da dependência sistema-mundo wallerstein poder duro poder brando poder coercitivo poder inteligente joseph nye armadilha de tucídides graham allison transição de poder hegemonia regional doutrina monroe autonomia pela participação',
+  objetivo:`Ao final, você vai saber explicar as principais teorias das relações internacionais — <b>realismo</b>, <b>liberalismo</b>, <b>construtivismo</b> e as visões críticas do Sul —, os tipos de <b>poder</b> (duro/coercitivo, brando, inteligente) e conceitos muito usados no noticiário: <b>dilema de segurança</b>, <b>armadilha de Tucídides</b>, <b>hegemonia regional</b> e <b>mudanças no poder global</b>.`,
+  porque:`<p>Quando um comentarista diz que a guerra na Ucrânia foi "provocada pela expansão da OTAN" e outro responde que foi "causada pelo imperialismo russo", eles estão, muitas vezes sem dizer, usando teorias diferentes sobre como o mundo funciona. Conhecer essas teorias é como ganhar óculos: você passa a ver por que analistas inteligentes chegam a conclusões opostas a partir dos mesmos fatos.</p>
+  <p>Também é útil para entender o Brasil, um país sem grande poder militar que aposta na diplomacia, nas regras e no poder brando para ter influência.</p>`,
+  corpo:`
+  <h3>1. Um sistema sem governo mundial</h3>
+  <p>Dentro de um país, há polícia, juízes e um governo que fazem cumprir as leis. Entre os países, não existe uma autoridade acima de todos — os estudiosos chamam isso de <b>anarquia internacional</b> (que não significa caos, mas ausência de governo central). A ONU, a OMC e os tribunais internacionais existem, mas dependem da vontade dos Estados (aula gg-14). Como os países se comportam nesse ambiente? Cada teoria responde de um jeito.</p>
+  <h3>2. Realismo: o mundo como ele é (segundo os realistas)</h3>
+  <p>Para os realistas, os Estados buscam sobreviver e aumentar seu <b>poder</b>, e cada um só pode contar consigo mesmo. A moral e as instituições valem pouco quando os interesses vitais estão em jogo.</p>
+  <ul>
+    <li><b>Tucídides</b>, ao narrar a Guerra do Peloponeso (século V a.C.), registrou o "Diálogo de Melos": os atenienses dizem aos habitantes da pequena ilha que "os fortes fazem o que podem, e os fracos sofrem o que devem". Maquiavel e Hobbes são outros precursores.</li>
+    <li><b>Hans Morgenthau</b> (<i>A política entre as nações</i>, 1948) sistematizou o realismo clássico: a política internacional é uma luta por poder.</li>
+    <li><b>Kenneth Waltz</b> (1979) criou o <b>neorrealismo</b>: não é a natureza humana, mas a <b>estrutura</b> anárquica do sistema que obriga os Estados a competir e a buscar o <b>equilíbrio de poder</b>.</li>
+    <li><b>John Mearsheimer</b> (realismo ofensivo, 2001): as grandes potências tentam ser a <b>potência hegemônica da sua região</b> e impedir que outra o seja em qualquer lugar. Os EUA fizeram isso nas Américas desde a Doutrina Monroe (aula hg-13); para ele, a China tentará o mesmo na Ásia.</li>
+  </ul>
+  <div class="box box-analogia"><span class="rot">O dilema de segurança</span>Imagine dois vizinhos sem polícia no bairro. Um compra um cachorro bravo e põe cerca elétrica "só para se defender". O outro vê aquilo como ameaça e compra uma arma. O primeiro, assustado, compra duas. No fim, os dois gastaram muito e estão menos seguros do que antes. Esse é o <b>dilema de segurança</b> (John Herz, 1950; Robert Jervis): o que um Estado faz para se proteger é percebido como ameaça pelo outro, alimentando corridas armamentistas — mesmo quando ninguém quer guerra.</div>
+  <h3>3. Liberalismo: cooperação é possível</h3>
+  <p>Os liberais não negam a anarquia, mas acreditam que a cooperação pode reduzir os conflitos:</p>
+  <ul>
+    <li><b>Kant</b> (<i>À paz perpétua</i>, 1795) imaginou uma federação de repúblicas que renunciariam à guerra. O presidente americano <b>Woodrow Wilson</b> (1918) propôs a Liga das Nações e a autodeterminação dos povos.</li>
+    <li><b>Instituições</b>: organizações e regras internacionais reduzem a desconfiança, criam previsibilidade e punem quem trapaceia.</li>
+    <li><b>Interdependência</b>: Robert Keohane e Joseph Nye (1977) mostraram que países ligados por comércio, investimentos e pessoas têm mais a perder com a guerra (aula gg-17).</li>
+    <li><b>Paz democrática</b>: democracias raramente — talvez nunca, segundo alguns estudos — fazem guerra entre si.</li>
+  </ul>
+  <h3>4. Construtivismo e visões críticas</h3>
+  <ul>
+    <li><b>Construtivismo</b>: para Alexander Wendt (1992), "a anarquia é o que os Estados fazem dela". Ideias, identidades e normas importam: 500 armas nucleares britânicas assustam menos os EUA do que 5 norte-coreanas, porque um é visto como amigo e o outro como inimigo.</li>
+    <li><b>Visões do Sul</b>: a teoria da dependência latino-americana (aula hg-30) e a teoria do sistema-mundo de Immanuel Wallerstein dividem o mundo em <b>centro</b>, <b>semiperiferia</b> e <b>periferia</b>, destacando a desigualdade econômica herdada do colonialismo. Estudiosos feministas e pós-coloniais mostram quem fica invisível nas teorias tradicionais.</li>
+  </ul>
+  <h3>5. As formas de poder</h3>
+  <table class="dados">
+    <tr><th>Tipo</th><th>O que é</th><th>Exemplos</th></tr>
+    <tr><td><b>Poder duro (coercitivo)</b></td><td>Fazer o outro agir pela ameaça ou pelo pagamento: força militar, sanções, tarifas, ajuda condicionada.</td><td>Invasões, bloqueios navais, sanções contra a Rússia, tarifas comerciais.</td></tr>
+    <tr><td><b>Poder brando (soft power)</b></td><td>Conceito de Joseph Nye (1990): atrair e persuadir pela cultura, pelos valores e pela legitimidade das políticas.</td><td>Hollywood, universidades americanas; a onda coreana (K-pop, novelas); o futebol, a música e a diplomacia ambiental do Brasil.</td></tr>
+    <tr><td><b>Poder inteligente (smart power)</b></td><td>Combinação calculada dos dois.</td><td>Ajuda econômica mais presença militar mais diplomacia cultural.</td></tr>
+  </table>
+  <p>O poder também depende de recursos materiais: população, território, economia, tecnologia, energia, forças armadas — e da capacidade de usá-los.</p>
+  <h3>6. Mudanças no poder global e a "armadilha de Tucídides"</h3>
+  <p>Teorias como a da <b>transição de poder</b> (A. F. K. Organski, 1958) e a da <b>estabilidade hegemônica</b> (Charles Kindleberger, Robert Gilpin) afirmam que a ordem internacional é mais estável quando há uma potência dominante, e mais perigosa quando uma potência em ascensão alcança a dominante. Pelo PIB medido em paridade de poder de compra, a China já supera os EUA desde meados da década de 2010; em dólares correntes, os EUA continuam à frente e mantêm vantagens militares, financeiras e de alianças (aula gg-09).</p>
+  <p>O cientista político Graham Allison popularizou em 2017 a expressão "<b>armadilha de Tucídides</b>", inspirada na frase do historiador grego: "foi a ascensão de Atenas e o medo que isso inspirou em Esparta que tornaram a guerra inevitável". Allison estudou 16 casos em 500 anos em que uma potência emergente desafiou a dominante: 12 terminaram em guerra.</p>
+  <div class="box box-debate"><span class="rot">Debate</span>A guerra entre EUA e China é provável? Críticos de Allison apontam que a seleção de casos é discutível, que as armas nucleares tornam a guerra entre grandes potências suicida e que as economias dos dois países são profundamente interdependentes. Realistas como Mearsheimer acham a competição inevitável, mas não necessariamente a guerra; liberais confiam mais em instituições e comércio; construtivistas lembram que tudo depende de como cada lado percebe o outro. O próprio Allison escreveu o livro para mostrar que a guerra pode ser evitada — 4 dos 16 casos terminaram em paz, como a passagem da liderança do Reino Unido para os EUA no início do século XX.</div>
+  <h3>7. E o Brasil?</h3>
+  <p>Sem grande poder militar e sem inimigos nas fronteiras, o Brasil tradicionalmente apostou no direito internacional, no multilateralismo e no poder brando. Os estudiosos falam em "<b>autonomia pela participação</b>" (influenciar as regras participando das instituições, como nos anos 1990) e "<b>autonomia pela diversificação</b>" (ampliar parcerias com o Sul Global, China, África, BRICS, como nos anos 2000). O desafio permanente é transformar o tamanho do país em influência real.</p>`,
+  conceitos:[
+    ['Anarquia internacional','Ausência de um governo acima dos Estados.'],
+    ['Realismo','Teoria que vê a política internacional como luta por poder entre Estados.'],
+    ['Equilíbrio de poder','Situação em que nenhum Estado consegue dominar os outros.'],
+    ['Dilema de segurança','Medidas defensivas de um Estado são vistas como ameaça por outro, gerando escalada.'],
+    ['Hegemonia regional','Domínio de uma potência sobre sua região (ex.: EUA nas Américas).'],
+    ['Liberalismo','Teoria que vê na cooperação, nas instituições e no comércio formas de reduzir conflitos.'],
+    ['Construtivismo','Teoria que destaca o papel das ideias, identidades e normas.'],
+    ['Poder duro','Poder coercitivo: força militar, sanções, pagamentos.'],
+    ['Poder brando','Poder de atração pela cultura, valores e legitimidade (Joseph Nye).'],
+    ['Armadilha de Tucídides','Risco de guerra quando uma potência emergente ameaça a dominante (Graham Allison).']
+  ],
+  mitos:[
+    ['"Anarquia internacional" significa caos total.','Significa apenas ausência de governo mundial; há regras, tratados e muita cooperação.'],
+    ['Realistas defendem a guerra.','Realistas descrevem o mundo como competitivo, mas muitos, como Morgenthau, foram críticos de guerras, como a do Vietnã.'],
+    ['Poder brando é coisa de país fraco.','EUA e China investem pesado nele; ele complementa o poder militar e econômico.']
+  ],
+  ceara:`<p>O poder brando brasileiro tem muito sotaque nordestino: o forró, o humor cearense, a culinária, as praias e a literatura de autores como José de Alencar e Rachel de Queiroz fazem parte da imagem do Brasil no exterior. Fortaleza também sediou, em 2014, a Cúpula dos BRICS que criou o banco do grupo — um exemplo de como o Brasil busca influência pela diplomacia e pelas instituições (aula gg-18).</p>`,
+  resumo:[
+    'Sem governo mundial (anarquia), os Estados agem segundo lógicas que as teorias explicam de formas diferentes.',
+    'Realismo: luta por poder, equilíbrio, dilema de segurança, hegemonia regional (Morgenthau, Waltz, Mearsheimer).',
+    'Liberalismo: cooperação por instituições, interdependência e paz democrática (Kant, Wilson, Keohane e Nye).',
+    'Construtivismo e visões do Sul destacam ideias, identidades e desigualdades centro-periferia.',
+    'Poder duro (coercitivo), brando e inteligente; a ascensão chinesa alimenta o debate sobre a "armadilha de Tucídides".'
+  ],
+  links:[
+    {tipo:'busca', nome:'Teorias das relações internacionais: realismo e liberalismo', url:'https://www.youtube.com/results?search_query=teorias+das+rela%C3%A7%C3%B5es+internacionais+realismo+liberalismo+construtivismo+aula', desc:'Aulas introdutórias de relações internacionais.'},
+    {tipo:'busca', nome:'Armadilha de Tucídides — EUA e China', url:'https://www.youtube.com/results?search_query=armadilha+de+Tuc%C3%ADdides+Graham+Allison+EUA+China', desc:'Vídeos e palestras sobre o conceito.'},
+    {tipo:'busca', nome:'Soft power — Joseph Nye', url:'https://www.youtube.com/results?search_query=soft+power+Joseph+Nye+explica%C3%A7%C3%A3o+poder+brando', desc:'Vídeos sobre o conceito de poder brando.'}
+  ]
+},
+
+'gg-14': {
+  tags:'diplomacia convenção de viena 1961 imunidade diplomática persona non grata tratados pacta sunt servanda ratificação política externa brasileira itamaraty instituto rio branco artigo 4º constituição multilateralismo unilateralismo minilateralismo onu omc solução de controvérsias órgão de apelação caso do algodão fmi cotas banco mundial novo banco de desenvolvimento direito internacional fontes jus cogens corte internacional de justiça tribunal penal internacional sanções econômicas embargo swift congelamento de reservas sanções secundárias petróleo por comida',
+  objetivo:`Ao final, você vai saber explicar como funcionam a <b>diplomacia</b> e a <b>política externa</b> (inclusive a do Brasil), o que é <b>multilateralismo</b>, como atuam na prática a <b>ONU</b>, a <b>OMC</b> e o <b>FMI</b>, quais são as fontes e os tribunais do <b>direito internacional</b> e como funcionam — e se funcionam — as <b>sanções econômicas</b>.`,
+  porque:`<p>Tarifas, sanções, mandados de prisão contra chefes de Estado, empréstimos do FMI, decisões da OMC: essas palavras aparecem toda semana no noticiário e afetam preços, empregos e exportações — inclusive as do Ceará. Esta aula mostra a "engrenagem" por trás delas.</p>
+  <p>A história dessas instituições está na aula hg-30 (a ordem de 1945). Aqui o foco é como elas funcionam hoje, seus limites e o papel do Brasil.</p>`,
+  corpo:`
+  <h3>1. Diplomacia e tratados</h3>
+  <ul>
+    <li>A <b>Convenção de Viena sobre Relações Diplomáticas</b> (1961) regula embaixadas e diplomatas: a embaixada é inviolável, e os diplomatas têm <b>imunidade</b> (não podem ser presos nem processados no país onde servem). Se o país anfitrião não quiser mais um diplomata, declara-o <i>persona non grata</i>, e ele precisa sair. Os consulados cuidam dos cidadãos no exterior (passaportes, vistos, apoio a presos).</li>
+    <li>Os <b>tratados</b> obrigam quem os ratifica: é o princípio <i>pacta sunt servanda</i> ("os acordos devem ser cumpridos"), consagrado na Convenção de Viena sobre o Direito dos Tratados (1969).</li>
+    <li>No Brasil, o presidente negocia e assina; o <b>Congresso</b> precisa aprovar; o presidente então ratifica e promulga por decreto. Tratados de direitos humanos aprovados com quórum especial têm força de emenda constitucional.</li>
+  </ul>
+  <h3>2. A política externa brasileira</h3>
+  <p>A diplomacia brasileira é conduzida pelo Itamaraty (Ministério das Relações Exteriores), cujos diplomatas são formados no <b>Instituto Rio Branco</b>. O artigo 4º da Constituição de 1988 lista os princípios das relações internacionais do país: independência nacional, prevalência dos direitos humanos, autodeterminação dos povos, <b>não intervenção</b>, igualdade entre os Estados, defesa da paz, <b>solução pacífica dos conflitos</b>, repúdio ao terrorismo e ao racismo, cooperação entre os povos e concessão de asilo político — e determina que o Brasil busque a integração da América Latina. Por tradição, o Brasil só aplica sanções aprovadas pelo Conselho de Segurança da ONU e evita tomar partido automático em conflitos entre grandes potências.</p>
+  <h3>3. Multilateralismo e seus rivais</h3>
+  <p><b>Multilateralismo</b> é resolver problemas comuns com regras negociadas entre muitos países, em fóruns como a ONU, a OMC e as conferências do clima. O oposto é o <b>unilateralismo</b> (agir sozinho, como em tarifas impostas por decreto ou guerras sem autorização da ONU). Entre os dois está o <b>minilateralismo</b>: grupos menores e flexíveis, como o G7, o G20, os BRICS ou a aliança AUKUS. Países médios e menores, como o Brasil, tendem a defender o multilateralismo, porque as regras protegem quem tem menos poder.</p>
+  <h3>4. ONU, OMC e FMI na prática</h3>
+  <table class="dados">
+    <tr><th>Instituição</th><th>Como funciona</th><th>Limites e polêmicas</th></tr>
+    <tr><td><b>ONU</b> (193 membros)</td><td>Assembleia Geral com um voto por país; Conselho de Segurança com decisões obrigatórias e veto de cinco membros (aula hg-30); agências como OMS, ACNUR e PMA.</td><td>Veto paralisa o Conselho em conflitos que envolvem as potências; falta de recursos; representação de 1945.</td></tr>
+    <tr><td><b>OMC</b> (166 membros)</td><td>Regras de comércio negociadas por consenso; cada país tem um voto. O <b>Órgão de Solução de Controvérsias</b> julga disputas e autoriza retaliações. O Brasil venceu casos importantes, como o do <b>algodão</b> contra os subsídios americanos (2009), que resultou em compensações aos produtores brasileiros.</td><td>Desde 2019, o órgão de apelação está paralisado porque os EUA bloqueiam a nomeação de juízes; rodadas de negociação travadas; tarifas unilaterais crescentes.</td></tr>
+    <tr><td><b>FMI</b> (191 membros)</td><td>Empresta a países em crise de balanço de pagamentos, em troca de "condicionalidades" (ajuste fiscal, reformas). O voto depende das <b>cotas</b>: os EUA têm cerca de 16% dos votos e, como as decisões mais importantes exigem 85%, têm poder de veto.</td><td>Críticas a programas de austeridade que aprofundaram recessões; sub-representação dos emergentes. O Brasil recorreu ao FMI nos anos 1980, em 1998 e em 2002, e quitou a dívida com o Fundo em 2005.</td></tr>
+  </table>
+  <p>Como alternativa, os BRICS criaram em 2014, em Fortaleza, o <b>Novo Banco de Desenvolvimento</b> e um fundo de reservas para emergências (aula gg-18).</p>
+  <h3>5. O direito internacional</h3>
+  <p>As fontes do direito internacional são os <b>tratados</b>, o <b>costume internacional</b> (práticas aceitas como obrigatórias) e os princípios gerais do direito. Algumas normas são consideradas <i>jus cogens</i> — imperativas, que nenhum tratado pode afastar —, como a proibição do genocídio, da escravidão, da tortura e da agressão.</p>
+  <ul>
+    <li>A <b>Corte Internacional de Justiça</b> (Haia) julga disputas entre <b>Estados</b>, desde limites até acusações de genocídio — como os casos movidos pela Gâmbia contra Mianmar (pelos rohingyas) e pela África do Sul contra Israel (por Gaza).</li>
+    <li>O <b>Tribunal Penal Internacional</b> (também em Haia) julga <b>indivíduos</b> por genocídio, crimes contra a humanidade, crimes de guerra e agressão. Emitiu mandados de prisão contra Vladimir Putin (2023) e contra Benjamin Netanyahu e seu ex-ministro da Defesa (2024); o ex-presidente filipino Rodrigo Duterte foi preso e entregue ao tribunal em 2025. EUA, Rússia, China, Índia e Israel não são membros.</li>
+  </ul>
+  <div class="box box-analogia"><span class="rot">Analogia</span>O direito internacional é como o regulamento de um condomínio sem síndico com poder de polícia: as regras existem, quase todos as cumprem na maior parte do tempo porque é do interesse de todos, e quem as viola paga um preço em reputação e retaliações. Mas, quando um morador grande e armado decide ignorá-las, os outros têm poucos meios de obrigá-lo.</div>
+  <h3>6. Sanções econômicas</h3>
+  <p><b>Sanções</b> são medidas econômicas para pressionar um país, empresa ou pessoa a mudar de comportamento sem usar a força. Podem ser aprovadas pelo Conselho de Segurança da ONU (obrigatórias para todos) ou aplicadas <b>unilateralmente</b> por um país ou bloco (EUA, União Europeia):</p>
+  <ul>
+    <li><b>Comerciais</b>: embargos, proibição de importar ou exportar certos produtos (como o embargo americano a Cuba, desde 1960–1962, condenado todos os anos pela Assembleia Geral da ONU).</li>
+    <li><b>Financeiras</b>: exclusão do sistema de mensagens bancárias SWIFT, proibição de usar dólares, <b>congelamento de reservas</b> — em 2022, cerca de 300 bilhões de dólares do Banco Central russo foram congelados no Ocidente.</li>
+    <li><b>Individuais</b>: congelamento de bens e proibição de viagem de líderes, oligarcas e empresas.</li>
+    <li><b>Sanções secundárias</b>: punir empresas de outros países que façam negócios com o alvo — o que dá aos EUA, pelo peso do dólar, um alcance mundial.</li>
+  </ul>
+  <div class="box box-debate"><span class="rot">Sanções funcionam?</span>Estudos clássicos (como o de Gary Hufbauer e colegas) estimam que as sanções atingem seus objetivos em cerca de um terço dos casos, sobretudo quando os objetivos são limitados e o alvo depende muito de quem sanciona. O cientista político Robert Pape contestou até esse número. Sanções contra Cuba, Irã, Coreia do Norte e Rússia não derrubaram os governos e podem até fortalecê-los internamente, enquanto a população sofre: nos anos 1990, as sanções ao Iraque causaram uma crise humanitária grave, levando ao programa "petróleo por comida". Defensores respondem que as sanções encarecem e limitam as políticas dos alvos e são melhores do que a guerra. Muitos países do Sul Global, incluindo o Brasil, criticam as sanções unilaterais sem aval da ONU.</div>`,
+  conceitos:[
+    ['Imunidade diplomática','Proteção que impede diplomatas de serem presos ou processados no país onde servem.'],
+    ['Persona non grata','Declaração que obriga um diplomata a deixar o país.'],
+    ['Pacta sunt servanda','Princípio de que os tratados devem ser cumpridos.'],
+    ['Multilateralismo','Solução de problemas comuns por regras negociadas entre muitos países.'],
+    ['Condicionalidade','Exigências de política econômica impostas pelo FMI em troca de empréstimos.'],
+    ['Jus cogens','Normas imperativas do direito internacional, como a proibição do genocídio.'],
+    ['Corte Internacional de Justiça','Tribunal da ONU que julga disputas entre Estados.'],
+    ['Tribunal Penal Internacional','Tribunal que julga indivíduos por crimes internacionais graves.'],
+    ['Sanções secundárias','Punições a terceiros que negociem com o país sancionado.']
+  ],
+  mitos:[
+    ['O direito internacional não é respeitado por ninguém.','A grande maioria das regras (comércio, aviação, correios, telecomunicações, mar) é cumprida todos os dias; as violações graves chamam atenção justamente por serem exceções.'],
+    ['A Corte Internacional de Justiça e o Tribunal Penal Internacional são a mesma coisa.','A primeira julga Estados; o segundo, pessoas.'],
+    ['Sanções só afetam governos.','Costumam atingir fortemente a população, com falta de remédios, alimentos e empregos.']
+  ],
+  ceara:`<p>As decisões tomadas em Genebra, Washington ou Haia chegam ao cais do Pecém. Quando os Estados Unidos impuseram tarifas adicionais a produtos brasileiros em 2025, exportadores cearenses de aço, pescado, castanha e frutas — setores que têm os EUA entre seus principais compradores — precisaram buscar outros mercados ou esperar exceções. É um exemplo de como o poder coercitivo de uma grande potência, exercido fora das regras multilaterais da OMC, afeta empregos num estado a milhares de quilômetros de distância (aula hg-37).</p>`,
+  resumo:[
+    'Diplomatas têm imunidade (Viena, 1961); tratados obrigam quem os ratifica; no Brasil, o Congresso precisa aprovar.',
+    'O artigo 4º da Constituição define os princípios da política externa brasileira: não intervenção, solução pacífica, direitos humanos, integração latino-americana.',
+    'Multilateralismo, unilateralismo e minilateralismo convivem; países médios tendem a defender regras comuns.',
+    'ONU (veto), OMC (órgão de apelação paralisado desde 2019) e FMI (cotas e veto americano) têm funções e limites claros.',
+    'A CIJ julga Estados e o TPI julga indivíduos; normas de jus cogens não podem ser afastadas.',
+    'Sanções podem ser da ONU ou unilaterais; sua eficácia é debatida e seus custos humanos são altos.'
+  ],
+  links:[
+    {tipo:'site', nome:'Itamaraty — Ministério das Relações Exteriores', url:'https://www.gov.br/mre/pt-br', desc:'Site oficial da diplomacia brasileira, com notas e tratados.'},
+    {tipo:'busca', nome:'Como funcionam as sanções econômicas', url:'https://www.youtube.com/results?search_query=como+funcionam+as+san%C3%A7%C3%B5es+econ%C3%B4micas+explica%C3%A7%C3%A3o', desc:'Vídeos explicativos sobre sanções.'},
+    {tipo:'busca', nome:'Diferença entre Corte Internacional de Justiça e Tribunal Penal Internacional', url:'https://www.youtube.com/results?search_query=diferen%C3%A7a+Corte+Internacional+de+Justi%C3%A7a+Tribunal+Penal+Internacional', desc:'Vídeos explicativos sobre os tribunais de Haia.'}
+  ]
+},
+
+'gg-15': {
+  tags:'alianças militares otan artigo 5 32 membros meta de 5% do pib cúpula de haia 2025 finlândia suécia pacto de varsóvia otsc aukus quad anzus tiar segurança coletiva dissuasão nuclear destruição mútua assegurada segundo ataque tríade nuclear tnp tratado de não proliferação tratado de tlatelolco abacc tratado de proibição de armas nucleares new start sipri arsenais nucleares china 620 ogivas memorando de budapeste submarino nuclear brasileiro prosub base do pici',
+  objetivo:`Ao final, você vai saber explicar o que são <b>alianças militares</b> (OTAN e outras), como funciona a <b>dissuasão nuclear</b>, quantas armas nucleares existem e com quem, quais tratados tentam controlá-las (TNP, New START) e qual é a posição do <b>Brasil</b> — país que renunciou à bomba, mas constrói um submarino de propulsão nuclear.`,
+  porque:`<p>As armas nucleares são a única invenção humana capaz de destruir a civilização em poucas horas. Depois de décadas de redução, os arsenais voltaram a crescer, e o último tratado que limitava as armas de EUA e Rússia expirou em 2026. Ao mesmo tempo, a guerra na Ucrânia fez a Europa se rearmar e fortaleceu a OTAN.</p>
+  <p>Entender alianças e dissuasão ajuda a ler o noticiário sem pânico e sem ingenuidade — e a entender por que o Brasil escolheu outro caminho.</p>`,
+  corpo:`
+  <h3>1. O que é uma aliança militar</h3>
+  <p>Uma aliança é um compromisso de defesa mútua entre Estados diante de uma ameaça comum. Para os realistas (aula gg-13), é um instrumento de equilíbrio de poder; o problema é que alianças também podem arrastar países para guerras alheias, como em 1914 (aula hg-15).</p>
+  <h3>2. A OTAN</h3>
+  <ul>
+    <li>Criada em <b>1949</b> por EUA, Canadá e dez países europeus para conter a URSS (aula hg-19). O coração do tratado é o <b>artigo 5º</b>: um ataque armado contra um membro é considerado um ataque contra todos. Ele só foi invocado uma vez, depois dos atentados de 11 de setembro de 2001 contra os EUA.</li>
+    <li>Depois da Guerra Fria, expandiu-se para o Leste (aula hg-22). Após a invasão russa da Ucrânia, Finlândia (2023) e Suécia (2024) abandonaram décadas de neutralidade e entraram. Hoje são <b>32 membros</b>.</li>
+    <li>Na cúpula de Haia, em junho de 2025, sob pressão do presidente Donald Trump, os membros concordaram em elevar os gastos com defesa a <b>5% do PIB até 2035</b> (3,5% em gastos militares e 1,5% em infraestrutura e segurança), contra a meta anterior de 2%.</li>
+  </ul>
+  <h3>3. Outras alianças e arranjos</h3>
+  <table class="dados">
+    <tr><th>Aliança</th><th>Membros e características</th></tr>
+    <tr><td>Pacto de Varsóvia (1955–1991)</td><td>URSS e países do Leste Europeu; dissolvido com o fim da Guerra Fria.</td></tr>
+    <tr><td>OTSC (1992)</td><td>Organização do Tratado de Segurança Coletiva, liderada pela Rússia, com ex-repúblicas soviéticas.</td></tr>
+    <tr><td>Alianças bilaterais dos EUA na Ásia</td><td>Japão, Coreia do Sul, Filipinas, Austrália — um "sistema de raios" em torno de Washington.</td></tr>
+    <tr><td>AUKUS (2021)</td><td>Austrália, Reino Unido e EUA: inclui submarinos de propulsão nuclear para a Austrália, pensando na China.</td></tr>
+    <tr><td>Quad</td><td>EUA, Japão, Índia e Austrália: diálogo de segurança no Indo-Pacífico, sem obrigação de defesa mútua.</td></tr>
+    <tr><td>Rússia–Coreia do Norte (2024)</td><td>Tratado de defesa mútua; soldados norte-coreanos lutaram ao lado da Rússia contra a Ucrânia.</td></tr>
+    <tr><td>China–Rússia</td><td>"Parceria sem limites" (2022), mas sem tratado formal de defesa mútua.</td></tr>
+    <tr><td>TIAR (1947)</td><td>Tratado Interamericano de Assistência Recíproca, do qual o Brasil faz parte; pouco usado e enfraquecido pela saída de vários países.</td></tr>
+  </table>
+  <p>O Brasil não pertence a nenhuma aliança militar ativa. Desde 2019 é considerado "aliado extra-OTAN" pelos EUA — status que facilita a compra de equipamentos, mas não envolve obrigação de defesa.</p>
+  <h3>4. A dissuasão nuclear</h3>
+  <p><b>Dissuadir</b> é convencer o adversário a não atacar mostrando que o custo seria inaceitável. Com as armas nucleares, essa lógica chegou ao extremo:</p>
+  <ul>
+    <li><b>Destruição Mútua Assegurada</b> (MAD, na sigla em inglês): se EUA e URSS tinham armas suficientes para destruir um ao outro mesmo depois de serem atacados, nenhum dos dois teria motivo racional para atacar primeiro.</li>
+    <li>A chave é a <b>capacidade de segundo ataque</b>: armas que sobrevivem a um ataque inicial — por isso as potências mantêm uma <b>tríade</b> de mísseis em silos, submarinos escondidos no oceano e bombardeiros.</li>
+    <li>Muitos historiadores atribuem à dissuasão a "<b>longa paz</b>" entre grandes potências desde 1945 (John Lewis Gaddis); outros lembram que o mundo esteve à beira da catástrofe várias vezes por erro (aula hg-19).</li>
+  </ul>
+  <div class="box box-analogia"><span class="rot">Analogia</span>A dissuasão nuclear funciona como dois motoristas que apontam um para o outro o mesmo controle remoto capaz de explodir os dois carros. Nenhum aperta, porque sabe que morreria junto. Funciona enquanto ambos são racionais, bem informados e o controle não tem defeito — e é exatamente isso que preocupa os especialistas: falhas técnicas, alarmes falsos, erros de cálculo e líderes imprevisíveis.</div>
+  <h3>5. Quantas armas existem e com quem</h3>
+  <p>Segundo o SIPRI (Instituto Internacional de Pesquisa para a Paz de Estocolmo), em janeiro de 2026 havia cerca de <b>12.187 ogivas nucleares</b> no mundo, das quais cerca de 9.745 em estoques militares prontos para uso potencial e cerca de 4.012 instaladas em mísseis e bases aéreas. EUA e Rússia detêm juntos cerca de 86% do total.</p>
+  <table class="dados">
+    <tr><th>País</th><th>Situação</th></tr>
+    <tr><td>EUA e Rússia</td><td>Cada um com milhares de ogivas; a Rússia tem o maior arsenal.</td></tr>
+    <tr><td>China</td><td>Cerca de 620 ogivas, o arsenal que mais cresce.</td></tr>
+    <tr><td>França e Reino Unido</td><td>Algumas centenas cada; os únicos arsenais nucleares da Europa Ocidental.</td></tr>
+    <tr><td>Índia e Paquistão</td><td>Cerca de 180–190 e 170, respectivamente; rivais diretos, com crises recorrentes na Caxemira.</td></tr>
+    <tr><td>Israel</td><td>Cerca de 90, nunca confirmadas oficialmente.</td></tr>
+    <tr><td>Coreia do Norte</td><td>Cerca de 50, depois de deixar o TNP em 2003.</td></tr>
+  </table>
+  <h3>6. O controle de armas</h3>
+  <ul>
+    <li><b>TNP</b> (Tratado de Não Proliferação, 1968): os países sem armas prometem não desenvolvê-las; os cinco reconhecidos (EUA, Rússia, Reino Unido, França, China) prometem negociar o desarmamento; todos têm direito ao uso pacífico da energia nuclear, sob inspeção da Agência Internacional de Energia Atômica. Índia, Paquistão e Israel nunca assinaram. Críticos, inclusive o Brasil durante décadas, o consideram desigual, porque congela a divisão entre "quem tem" e "quem não tem".</li>
+    <li><b>Acordos EUA–URSS/Rússia</b>: desde os anos 1970, reduziram os arsenais de cerca de 70 mil ogivas no auge (meados dos anos 1980) para os números atuais. O último deles, o <b>New START</b>, expirou em <b>5 de fevereiro de 2026</b>, sem substituto — pela primeira vez em mais de meio século, não há limites negociados entre os dois maiores arsenais.</li>
+    <li><b>Tratado de Proibição de Armas Nucleares</b> (2017, em vigor desde 2021): proíbe totalmente essas armas, mas nenhum país nuclear aderiu.</li>
+  </ul>
+  <div class="box box-debate"><span class="rot">Debate: mais armas, mais segurança?</span>O neorrealista Kenneth Waltz chegou a defender que a difusão gradual de armas nucleares poderia estabilizar o mundo, porque tornaria a guerra suicida para todos. O cientista político Scott Sagan respondeu que mais países com armas significam mais chances de acidentes, roubos por terroristas e decisões erradas. A guerra na Ucrânia reacendeu a discussão: em 1994, pelo Memorando de Budapeste, a Ucrânia entregou à Rússia as armas soviéticas que ficaram em seu território em troca de garantias de integridade territorial — que a Rússia violou. Para alguns, a lição é que só a bomba garante a soberania, argumento que preocupa quem teme uma nova onda de proliferação.</div>
+  <h3>7. O Brasil e a bomba</h3>
+  <p>Nos anos 1970 e 1980, os militares brasileiros mantiveram um programa nuclear paralelo, e Brasil e Argentina desconfiavam um do outro. A redemocratização mudou tudo: a Constituição de 1988 determina que a atividade nuclear no Brasil só pode ter fins pacíficos; em 1991, os dois países criaram a <b>ABACC</b>, agência que inspeciona mutuamente suas instalações — um caso raro de rivais que construíram confiança —; a América Latina já era zona livre de armas nucleares pelo Tratado de Tlatelolco (1967); e o Brasil aderiu ao TNP em 1998. Hoje, a Marinha desenvolve um <b>submarino com propulsão nuclear</b> (o programa Prosub), que usará reator nuclear para se mover, mas não armas nucleares — com a missão de proteger a "Amazônia Azul" (aula gg-16).</p>`,
+  conceitos:[
+    ['Aliança militar','Compromisso de defesa mútua entre Estados.'],
+    ['Artigo 5º da OTAN','Cláusula pela qual um ataque a um membro é considerado ataque a todos.'],
+    ['Dissuasão','Estratégia de evitar um ataque mostrando que seu custo seria inaceitável.'],
+    ['Destruição Mútua Assegurada','Situação em que dois rivais nucleares podem se destruir mesmo após um primeiro ataque.'],
+    ['Capacidade de segundo ataque','Capacidade de retaliar mesmo depois de sofrer um ataque nuclear.'],
+    ['Tríade nuclear','Mísseis terrestres, submarinos e bombardeiros com armas nucleares.'],
+    ['TNP','Tratado de Não Proliferação Nuclear (1968).'],
+    ['New START','Último tratado de limitação de armas estratégicas EUA–Rússia, expirado em 2026.'],
+    ['ABACC','Agência Brasileiro-Argentina de Contabilidade e Controle de Materiais Nucleares (1991).']
+  ],
+  mitos:[
+    ['Submarino nuclear é submarino com bomba atômica.','"Nuclear" se refere à propulsão (o motor); o submarino brasileiro usará armas convencionais.'],
+    ['Os arsenais nucleares nunca pararam de crescer.','Caíram de cerca de 70 mil ogivas nos anos 1980 para cerca de 12 mil — mas a tendência de queda pode estar se invertendo.'],
+    ['A OTAN pode atacar qualquer país quando quiser.','É uma aliança defensiva que decide por consenso; operações fora do território dos membros (Kosovo, Afeganistão, Líbia) foram exceções debatidas.']
+  ],
+  ceara:`<p>Fortaleza já foi peça de uma aliança militar. Durante a Segunda Guerra, depois do acordo entre Vargas e os EUA (aula hg-18), os americanos instalaram no bairro do <b>Pici</b> uma base aérea usada por aviões e dirigíveis de patrulha que caçavam submarinos alemães no Atlântico Sul. O Nordeste, a ponta das Américas mais próxima da África, era estratégico para a rota aérea rumo à guerra no norte da África e na Europa. Depois da guerra, a área passou a abrigar o que hoje é o <b>Campus do Pici</b> da Universidade Federal do Ceará.</p>`,
+  resumo:[
+    'Alianças militares são compromissos de defesa mútua; a OTAN (1949) tem 32 membros e o artigo 5º como base.',
+    'Em 2025, a OTAN fixou a meta de 5% do PIB em defesa até 2035; Finlândia e Suécia entraram após a invasão da Ucrânia.',
+    'A dissuasão nuclear se baseia na destruição mútua assegurada e na capacidade de segundo ataque.',
+    'Em janeiro de 2026 havia cerca de 12.187 ogivas (SIPRI); EUA e Rússia têm cerca de 86%; a China cresce mais rápido.',
+    'O TNP é a base do regime de não proliferação; o New START expirou em fevereiro de 2026 sem substituto.',
+    'O Brasil renunciou às armas nucleares (Constituição, ABACC, TNP) e desenvolve um submarino de propulsão nuclear.'
+  ],
+  links:[
+    {tipo:'site', nome:'SIPRI — Instituto Internacional de Pesquisa para a Paz de Estocolmo', url:'https://www.sipri.org', desc:'Dados sobre arsenais nucleares, gastos militares e conflitos (em inglês).'},
+    {tipo:'busca', nome:'O que é a OTAN e como funciona', url:'https://www.youtube.com/results?search_query=o+que+%C3%A9+a+OTAN+como+funciona+artigo+5+explica%C3%A7%C3%A3o', desc:'Vídeos explicativos.'},
+    {tipo:'busca', nome:'Dissuasão nuclear explicada', url:'https://www.youtube.com/results?search_query=dissuas%C3%A3o+nuclear+destrui%C3%A7%C3%A3o+m%C3%BAtua+assegurada+explica%C3%A7%C3%A3o', desc:'Vídeos sobre a lógica das armas nucleares.'}
+  ]
+},
+
+'gg-16': {
+  tags:'geopolítica dos oceanos convenção das nações unidas sobre o direito do mar unclos mar territorial 12 milhas zona contígua zona econômica exclusiva 200 milhas plataforma continental alto-mar passagem inocente passagem em trânsito amazônia azul pontos estratégicos de passagem chokepoints estreito de ormuz estreito de malaca canal de suez bab el-mandeb canal do panamá bósforo dardanelos convenção de montreux gibraltar cabo da boa esperança houthis mar vermelho guerra do irã 2026 mar do sul da china linha de nove traços arbitragem de 2016 ártico rota do mar do norte groenlândia cabos submarinos praia do futuro',
+  objetivo:`Ao final, você vai saber explicar as regras do <b>direito do mar</b> (mar territorial, zona econômica exclusiva, alto-mar), o que é a <b>Amazônia Azul</b>, quais são os principais <b>pontos estratégicos de passagem</b> do comércio mundial e por que crises recentes no Mar Vermelho e no Estreito de Ormuz afetaram o mundo inteiro — além das disputas no Mar do Sul da China e no Ártico e da importância dos <b>cabos submarinos</b>.`,
+  porque:`<p>Cerca de 80% do volume do comércio mundial viaja por mar, e quase todo o tráfego de internet entre continentes passa por cabos no fundo do oceano. Basta fechar um estreito de poucas dezenas de quilômetros para que o preço do petróleo dispare e as prateleiras fiquem vazias do outro lado do mundo — foi o que se viu com os ataques no Mar Vermelho desde 2023 e com a guerra envolvendo o Irã em 2026.</p>
+  <p>O Ceará está no centro dessa geografia: a Praia do Futuro, em Fortaleza, é um dos maiores pontos de chegada de cabos submarinos do mundo, e o Porto do Pecém liga o estado às grandes rotas marítimas.</p>`,
+  corpo:`
+  <h3>1. O direito do mar</h3>
+  <p>A <b>Convenção das Nações Unidas sobre o Direito do Mar</b> (assinada em Montego Bay, na Jamaica, em 1982, e em vigor desde 1994) é chamada de "constituição dos oceanos". O Brasil é parte; os EUA não a ratificaram, embora sigam a maior parte de suas regras. Ela divide o mar em faixas medidas a partir da costa (1 milha náutica = 1.852 metros):</p>
+  <table class="dados">
+    <tr><th>Faixa</th><th>Extensão</th><th>Direitos do país costeiro</th></tr>
+    <tr><td><b>Mar territorial</b></td><td>Até 12 milhas (cerca de 22 km)</td><td>Soberania plena, como em terra; navios estrangeiros têm direito de "passagem inocente".</td></tr>
+    <tr><td><b>Zona contígua</b></td><td>Até 24 milhas</td><td>Fiscalização aduaneira, sanitária e de imigração.</td></tr>
+    <tr><td><b>Zona econômica exclusiva (ZEE)</b></td><td>Até 200 milhas (cerca de 370 km)</td><td>Direitos exclusivos sobre pesca, petróleo, gás, minérios e energia eólica; outros países podem navegar e passar cabos.</td></tr>
+    <tr><td><b>Plataforma continental</b></td><td>Pode ir além das 200 milhas, até 350, se o país comprovar</td><td>Direitos sobre o solo e o subsolo marinhos.</td></tr>
+    <tr><td><b>Alto-mar</b></td><td>Além das jurisdições nacionais</td><td>Liberdade de navegação; o fundo do mar é "patrimônio comum da humanidade".</td></tr>
+  </table>
+  <p>Nos estreitos usados para a navegação internacional, vale a "passagem em trânsito": navios e aviões não podem ser impedidos de atravessar.</p>
+  <h3>2. A Amazônia Azul</h3>
+  <p>Somando o mar territorial, a ZEE e a plataforma continental estendida que reivindica, o Brasil tem direitos sobre cerca de <b>5,7 milhões de km²</b> de oceano — uma área comparável à da Amazônia, por isso a Marinha a batizou de "<b>Amazônia Azul</b>". Ali estão o petróleo do pré-sal (a maior parte da produção nacional), a pesca, o potencial de eólica marítima, minerais do fundo do mar e as rotas por onde passa a quase totalidade do comércio exterior brasileiro (aula gb-33).</p>
+  <h3>3. Os pontos estratégicos de passagem</h3>
+  <p>Os estrategistas chamam de <i>chokepoints</i> ("pontos de estrangulamento") as passagens estreitas por onde é obrigatório ou muito mais barato passar:</p>
+  <table class="dados">
+    <tr><th>Passagem</th><th>Liga</th><th>Importância</th></tr>
+    <tr><td><b>Estreito de Ormuz</b></td><td>Golfo Pérsico e Oceano Índico</td><td>Por ele passava, antes de 2026, cerca de um quinto do petróleo consumido no mundo, além de muito gás natural do Catar.</td></tr>
+    <tr><td><b>Estreito de Malaca</b></td><td>Índico e Mar da China</td><td>A rota mais curta entre o Oriente Médio, a Europa e a Ásia Oriental; vital para China, Japão e Coreia.</td></tr>
+    <tr><td><b>Canal de Suez</b> e <b>Bab el-Mandeb</b></td><td>Mediterrâneo, Mar Vermelho e Índico</td><td>Rota Europa–Ásia; antes da crise, cerca de 12% a 15% do comércio mundial.</td></tr>
+    <tr><td><b>Canal do Panamá</b></td><td>Atlântico e Pacífico</td><td>Essencial para o comércio dos EUA e para grãos sul-americanos; em 2023–2024, uma seca reduziu o nível dos lagos que abastecem as eclusas e limitou as travessias.</td></tr>
+    <tr><td><b>Bósforo e Dardanelos</b></td><td>Mar Negro e Mediterrâneo</td><td>Única saída marítima da Rússia e da Ucrânia para o sul; a Turquia controla a passagem de navios de guerra pela Convenção de Montreux (1936).</td></tr>
+    <tr><td><b>Gibraltar</b>, Canal da Mancha, Estreito de Taiwan</td><td>—</td><td>Rotas de enorme tráfego e importância militar.</td></tr>
+  </table>
+  <div class="box box-analogia"><span class="rot">Analogia</span>Um <i>chokepoint</i> é como a única ponte que liga um bairro ao centro da cidade. Se ela fecha, todo mundo precisa dar uma volta enorme — e quem controla a ponte tem um poder desproporcional ao seu tamanho. Para os navios, a "volta" de Suez é contornar a África pelo Cabo da Boa Esperança, o que acrescenta cerca de 10 a 14 dias de viagem entre a Ásia e a Europa.</div>
+  <h3>4. As crises recentes</h3>
+  <ul>
+    <li><b>Mar Vermelho</b>: a partir do fim de 2023, os houthis do Iêmen, apoiados pelo Irã, atacaram navios mercantes em solidariedade aos palestinos de Gaza. As grandes empresas de navegação desviaram suas rotas pelo sul da África, encarecendo fretes e seguros. Mesmo após a pausa dos ataques no fim de 2025, no início de 2026 o tráfego em Suez seguia cerca de 60% abaixo do nível de 2023, segundo a BIMCO, associação internacional de armadores, e novas ameaças surgiram ao longo do ano.</li>
+    <li><b>Ormuz</b>: em <b>28 de fevereiro de 2026</b>, EUA e Israel atacaram o Irã. O Irã fechou na prática o Estreito de Ormuz, chegou a cobrar "pedágio" de navios — algo contrário ao direito do mar —, e os EUA responderam com um bloqueio naval aos portos iranianos. O petróleo passou de 100 dólares o barril. Ao longo de 2026 houve cessar-fogos frágeis, acordos anunciados e contestados, e negociações sobre a gestão do estreito envolvendo também Omã, que divide com o Irã as margens da passagem.</li>
+  </ul>
+  <p>Essas crises mostraram ao mundo o peso da geografia: pequenos atores com mísseis e drones baratos podem afetar a economia global, e países produtores passaram a estudar oleodutos e rotas alternativas.</p>
+  <h3>5. Mar do Sul da China e Ártico</h3>
+  <ul>
+    <li><b>Mar do Sul da China</b>: a China reivindica quase todo esse mar com base numa "linha de nove traços", contra Filipinas, Vietnã, Malásia, Brunei e Taiwan. Construiu ilhas artificiais com pistas e instalações militares nos arquipélagos Spratly e Paracel. Em 2016, um tribunal arbitral formado com base na Convenção do Mar decidiu a favor das Filipinas e considerou a reivindicação chinesa sem base legal; a China rejeitou a decisão. Choques entre guardas costeiras chinesas e filipinas são frequentes. Por ali passa cerca de um terço do comércio marítimo mundial.</li>
+    <li><b>Ártico</b>: com o derretimento do gelo provocado pelo aquecimento global, abrem-se rotas mais curtas entre a Ásia e a Europa — como a Rota do Mar do Norte, ao longo da costa russa — e o acesso a petróleo, gás e minerais. Rússia, EUA, Canadá, Noruega, Dinamarca (com a Groenlândia) e até a China, que se diz "Estado quase ártico", disputam influência. O interesse declarado do governo Trump em controlar a <b>Groenlândia</b> mostrou que a região virou tema central.</li>
+  </ul>
+  <h3>6. O fundo do mar: cabos submarinos</h3>
+  <p>Cerca de 99% do tráfego intercontinental de dados — internet, transações bancárias, chamadas — passa por <b>cabos de fibra óptica</b> no fundo do oceano, e não por satélites. Esses cabos são vulneráveis a âncoras de navios, terremotos e sabotagem; nos últimos anos, cortes suspeitos no Mar Báltico e em Taiwan levaram governos a tratá-los como infraestrutura militar crítica.</p>
+  <div class="box box-debate"><span class="rot">Liberdade de navegação ou soberania?</span>EUA e aliados fazem "operações de liberdade de navegação", passando com navios de guerra por águas que outros reivindicam, para afirmar que o mar é aberto a todos. China, Irã e outros veem nisso provocação e defendem mais controle sobre as águas próximas às suas costas. O Brasil tem posição própria: exige autorização para exercícios militares estrangeiros em sua zona econômica exclusiva — interpretação que os EUA contestam. A disputa é sobre quem escreve e interpreta as regras do mar.</div>`,
+  conceitos:[
+    ['Mar territorial','Faixa de até 12 milhas náuticas sob soberania plena do país costeiro.'],
+    ['Zona econômica exclusiva','Faixa de até 200 milhas com direitos exclusivos sobre os recursos.'],
+    ['Plataforma continental','Prolongamento submerso do continente, com direitos sobre solo e subsolo.'],
+    ['Alto-mar','Área fora das jurisdições nacionais, com liberdade de navegação.'],
+    ['Amazônia Azul','Área marítima sob jurisdição brasileira, de cerca de 5,7 milhões de km².'],
+    ['Chokepoint','Ponto estreito e estratégico de passagem marítima.'],
+    ['Passagem em trânsito','Direito de atravessar estreitos internacionais sem impedimento.'],
+    ['Linha de nove traços','Base da reivindicação chinesa sobre o Mar do Sul da China.']
+  ],
+  mitos:[
+    ['A internet entre continentes funciona por satélite.','Quase todo o tráfego intercontinental passa por cabos submarinos.'],
+    ['O país pode proibir qualquer navio estrangeiro na sua ZEE.','A ZEE dá direitos sobre recursos, mas outros países podem navegar e sobrevoar.'],
+    ['Fechar um estreito só afeta a região.','Afeta preços de petróleo, fretes e cadeias produtivas no mundo todo, inclusive no Brasil.']
+  ],
+  ceara:`<p>A <b>Praia do Futuro</b>, em Fortaleza, é um dos maiores pontos de chegada de cabos submarinos do mundo: são cerca de 16 a 18 cabos ativos, conforme a contagem, ligando o Brasil à Europa, à África, ao Caribe e aos EUA — por eles passa a grande maioria dos dados de internet que entram e saem do país. A posição de Fortaleza, na "esquina" nordeste da América do Sul, mais perto da Europa e da África, explica essa concentração — e atrai data centers e grandes empresas de tecnologia para o Ceará. A Marinha já fez exercícios de proteção desses cabos, tratados como infraestrutura crítica, e o governo federal discute espalhar novos pontos de chegada pelo litoral para reduzir a dependência de um único local.</p>
+  <p>O <b>Porto do Pecém</b>, por sua vez, liga o estado às rotas para a Europa e os EUA — e sente diretamente os efeitos de crises como as de Suez e Ormuz nos fretes e no preço dos combustíveis.</p>`,
+  resumo:[
+    'A Convenção do Mar (1982) define mar territorial (12 milhas), zona contígua (24), ZEE (200), plataforma continental e alto-mar.',
+    'O Brasil tem direitos sobre cerca de 5,7 milhões de km² de oceano, a Amazônia Azul.',
+    'Ormuz, Malaca, Suez/Bab el-Mandeb, Panamá e Bósforo são pontos estratégicos de passagem.',
+    'Os ataques houthis no Mar Vermelho (desde 2023) e a guerra envolvendo o Irã (2026) mostraram a vulnerabilidade dessas rotas.',
+    'China e vizinhos disputam o Mar do Sul da China; o degelo transforma o Ártico em nova fronteira geopolítica.',
+    'Cerca de 99% dos dados intercontinentais passam por cabos submarinos — e Fortaleza é um dos grandes hubs do mundo.'
+  ],
+  links:[
+    {tipo:'site', nome:'Submarine Cable Map', url:'https://www.submarinecablemap.com', desc:'Mapa interativo dos cabos submarinos do mundo — veja os que chegam a Fortaleza.'},
+    {tipo:'busca', nome:'Pontos estratégicos do comércio marítimo (chokepoints)', url:'https://www.youtube.com/results?search_query=pontos+estrat%C3%A9gicos+com%C3%A9rcio+mar%C3%ADtimo+estreito+de+Ormuz+Malaca+Suez+geopol%C3%ADtica', desc:'Vídeos sobre as passagens marítimas.'},
+    {tipo:'busca', nome:'Amazônia Azul — Marinha do Brasil', url:'https://www.youtube.com/results?search_query=Amaz%C3%B4nia+Azul+Marinha+do+Brasil+explica%C3%A7%C3%A3o', desc:'Vídeos sobre a área marítima brasileira.'}
+  ]
+},
+
+'gg-17': {
+  tags:'recursos naturais geopolítica dos recursos minerais críticos lítio triângulo do lítio cobalto congo terras raras china nióbio brasil cbmm reservas de terras raras brasil fertilizantes potássio água conflitos barragem do renascimento nilo tratado das águas do indo maldição dos recursos doença holandesa fundo soberano norueguês diamantes de sangue processo de kimberley coltan interdependência econômica sensibilidade vulnerabilidade interdependência armada semicondutores tsmc controles de exportação gálio germânio cadeias de suprimento resiliência paz pelo comércio wandel durch handel nord stream urânio itataia santa quitéria hidrogênio verde pecém',
+  objetivo:`Ao final, você vai saber explicar por que <b>recursos naturais</b> — minerais críticos, água, alimentos, energia — são fonte de poder e de conflito; o que é a "maldição dos recursos"; o que significa <b>interdependência econômica</b> e como ela pode ser usada como arma; e onde o Brasil e o Ceará entram nessa disputa.`,
+  porque:`<p>O carro elétrico, o celular, a turbina eólica e os mísseis dependem de minerais como lítio, cobalto e terras raras, cuja produção está concentrada em poucos países — especialmente na China. Água e alimentos também viraram questões de segurança. E a ideia de que comerciar muito com outro país evita a guerra foi posta em xeque quando a Rússia invadiu a Ucrânia mesmo vendendo gás para a Europa.</p>
+  <p>O Brasil é uma potência em recursos: tem a maior parte do nióbio do mundo, grandes reservas de terras raras, minério de ferro, água doce, terras agrícolas e energia renovável. Saber usar isso é uma das grandes questões estratégicas do país. A aula gg-08 trata do petróleo e da transição energética; esta aula amplia o tema para outros recursos e para o uso do comércio como poder.</p>`,
+  corpo:`
+  <h3>1. Os minerais críticos</h3>
+  <p>São chamados de <b>críticos</b> os minerais essenciais para tecnologias estratégicas e com oferta concentrada ou arriscada:</p>
+  <table class="dados">
+    <tr><th>Mineral</th><th>Uso</th><th>Onde está</th></tr>
+    <tr><td><b>Lítio</b></td><td>Baterias de carros elétricos e celulares</td><td>Austrália, Chile, Argentina e Bolívia (o "triângulo do lítio"), China; o Brasil produz no Vale do Jequitinhonha (MG).</td></tr>
+    <tr><td><b>Cobalto</b></td><td>Baterias</td><td>A República Democrática do Congo responde por cerca de 70% da produção mundial, muitas vezes com mineração artesanal perigosa e trabalho infantil.</td></tr>
+    <tr><td><b>Terras raras</b></td><td>Ímãs de motores elétricos, turbinas eólicas, eletrônicos, armas</td><td>A China domina a mineração e, principalmente, o refino (perto de 90%). O Brasil tem uma das maiores reservas do mundo, ainda pouco exploradas.</td></tr>
+    <tr><td><b>Nióbio</b></td><td>Ligas de aço mais leves e resistentes</td><td>O Brasil produz cerca de 90% do total mundial, sobretudo em Araxá (MG).</td></tr>
+    <tr><td><b>Cobre, níquel, grafite, gálio, germânio</b></td><td>Redes elétricas, baterias, chips</td><td>Chile e Peru (cobre), Indonésia (níquel), China (grafite, gálio, germânio).</td></tr>
+  </table>
+  <p>O ponto central não é só ter a jazida, mas dominar o <b>processamento</b>: a China investiu por décadas em refinarias, enquanto outros países fecharam as suas por custo e poluição. Em 2023 e 2025, a China restringiu exportações de gálio, germânio e terras raras, em resposta a controles americanos sobre chips — e indústrias do mundo inteiro sentiram o golpe.</p>
+  <h3>2. Água, alimentos e fertilizantes</h3>
+  <ul>
+    <li><b>Água</b>: cerca de 60% da água doce do mundo está em bacias compartilhadas por dois ou mais países. A Etiópia construiu no Nilo Azul a Grande Barragem do Renascimento, inaugurada em 2025, contra a oposição do Egito, que depende do Nilo para quase toda a sua água. Em 2025, a Índia suspendeu o Tratado das Águas do Indo com o Paquistão, em vigor desde 1960, após um atentado na Caxemira.</li>
+    <li><b>Alimentos</b>: a guerra na Ucrânia, grande exportadora de trigo e óleo de girassol, fez os preços dispararem em 2022, ameaçando a segurança alimentar de países importadores da África e do Oriente Médio.</li>
+    <li><b>Fertilizantes</b>: o Brasil, potência agrícola, importa cerca de 85% dos fertilizantes que usa — boa parte do potássio vem da Rússia e de Belarus e do Canadá. É uma vulnerabilidade estratégica do agronegócio brasileiro.</li>
+  </ul>
+  <h3>3. A "maldição dos recursos"</h3>
+  <p>Ter muitos recursos nem sempre traz desenvolvimento. Os economistas chamam de <b>maldição dos recursos</b> o fato de que muitos países ricos em petróleo ou minérios crescem menos, são mais desiguais e mais autoritários. As explicações:</p>
+  <ul>
+    <li><b>Doença holandesa</b>: a exportação de um recurso valoriza a moeda e torna a indústria e a agricultura menos competitivas (o nome vem da Holanda, após a descoberta de gás nos anos 1960).</li>
+    <li><b>Volatilidade</b>: preços de commodities sobem e caem bruscamente, provocando crises.</li>
+    <li><b>Política</b>: governos que vivem da renda do petróleo dependem menos de impostos dos cidadãos e, por isso, prestam menos contas; elites disputam o controle da renda, às vezes com armas.</li>
+  </ul>
+  <p>Há contraexemplos: a <b>Noruega</b> guarda a renda do petróleo num fundo soberano gigante para as futuras gerações; Botsuana usou os diamantes para financiar educação e saúde. Do outro lado, os "<b>diamantes de sangue</b>" financiaram guerras civis em Serra Leoa e Angola (levando à criação do Processo de Kimberley, em 2003, para certificar a origem dos diamantes), e a disputa por minerais como o coltan alimenta conflitos no leste do Congo até hoje.</p>
+  <h3>4. Interdependência: ponte ou arma?</h3>
+  <p>Keohane e Nye (aula gg-13) distinguiram dois tipos de interdependência: a <b>sensibilidade</b> (quanto um país é afetado quando algo muda no outro) e a <b>vulnerabilidade</b> (quanto custaria ao país encontrar alternativas). Quem depende mais está em posição mais fraca. Em 2019, os cientistas políticos Henry Farrell e Abraham Newman cunharam a expressão "<b>interdependência armada</b>": países que controlam os "nós" das redes globais podem usá-los como arma. Exemplos:</p>
+  <ul>
+    <li>Os EUA controlam o dólar e o sistema financeiro internacional — base de suas sanções (aula gg-14).</li>
+    <li>Taiwan, por meio da empresa TSMC, fabrica a grande maioria dos chips mais avançados do mundo; os EUA proíbem desde 2022 a venda de chips e máquinas de ponta à China.</li>
+    <li>A China domina o refino de minerais críticos e a produção de painéis solares e baterias.</li>
+    <li>A Rússia usou o corte do gás para a Europa como arma em 2022 (aula gg-08).</li>
+  </ul>
+  <p>A reação dos governos tem sido buscar "<b>resiliência</b>": diversificar fornecedores, produzir em casa ou em países aliados, fazer estoques estratégicos — mesmo que custe mais.</p>
+  <div class="box box-analogia"><span class="rot">Analogia</span>Um almoxarifado que compra uma peça essencial de um único fornecedor funciona muito bem — até o dia em que o fornecedor atrasa, aumenta o preço ou decide não vender mais. A lição que todo gestor de estoque conhece — não depender de fornecedor único para itens críticos e manter estoque de segurança — é exatamente o que os países estão tentando aplicar hoje a chips, minerais, remédios e fertilizantes.</div>
+  <div class="box box-debate"><span class="rot">O comércio evita a guerra?</span>A tradição liberal, de Montesquieu ao século XX, defende que o "doce comércio" torna a guerra custosa demais. A Alemanha apostou nisso com a Rússia, sob o lema <i>Wandel durch Handel</i> ("mudança pelo comércio"), construindo os gasodutos Nord Stream. A invasão da Ucrânia em 2022 foi vista como o fracasso dessa aposta. Realistas lembram que, em 1914, Alemanha e Reino Unido eram grandes parceiros comerciais e foram à guerra mesmo assim. Liberais respondem que a interdependência não impede todas as guerras, mas eleva seu custo e ajuda a explicar por que as grandes potências evitam o confronto direto. O debate é central para a relação entre EUA e China, que continuam profundamente interdependentes.</div>`,
+  conceitos:[
+    ['Minerais críticos','Minerais essenciais para tecnologias estratégicas e com oferta concentrada.'],
+    ['Terras raras','Grupo de 17 elementos usados em ímãs, eletrônicos e armas.'],
+    ['Maldição dos recursos','Tendência de países ricos em recursos naturais a crescerem menos e serem mais desiguais e autoritários.'],
+    ['Doença holandesa','Perda de competitividade da indústria causada pela valorização cambial ligada à exportação de recursos.'],
+    ['Fundo soberano','Fundo estatal que investe receitas de recursos naturais para o futuro.'],
+    ['Processo de Kimberley','Sistema de certificação de origem de diamantes (2003).'],
+    ['Interdependência armada','Uso, como arma, do controle sobre nós das redes econômicas globais.'],
+    ['Resiliência das cadeias','Capacidade de manter o abastecimento diante de choques, diversificando fornecedores.']
+  ],
+  mitos:[
+    ['Quem tem a jazida tem o poder.','O poder está também no processamento e na tecnologia; a China domina o refino de minerais que nem sempre extrai.'],
+    ['Riqueza natural sempre gera desenvolvimento.','Sem instituições fortes, pode gerar dependência, desigualdade e conflito — a "maldição dos recursos".'],
+    ['Comércio intenso torna a guerra impossível.','Aumenta seu custo, mas não a impede, como mostraram 1914 e 2022.']
+  ],
+  ceara:`<p>O Ceará guarda um recurso estratégico pouco conhecido: a jazida de <b>Itataia</b>, em Santa Quitéria, uma das maiores reservas de urânio do Brasil, associada a fosfato. O projeto de exploração, que produziria urânio para as usinas nucleares e fosfato para fertilizantes — reduzindo a dependência de importações —, há anos passa por licenciamento e é contestado por comunidades locais e ambientalistas pelos riscos à água e à saúde.</p>
+  <p>O estado também aposta em outro recurso: o vento e o sol. Com parques eólicos e solares e o projeto de um polo de <b>hidrogênio verde</b> no Complexo do Pecém, voltado em parte à exportação para a Europa, o Ceará entra na disputa global pela energia do futuro — e com ela nas questões de interdependência discutidas nesta aula (aulas gg-08 e gb-21).</p>`,
+  resumo:[
+    'Minerais críticos (lítio, cobalto, terras raras, nióbio) são essenciais à transição energética e à defesa; a China domina o refino.',
+    'Água, alimentos e fertilizantes também são questões de segurança; o Brasil importa cerca de 85% de seus fertilizantes.',
+    'A "maldição dos recursos" (doença holandesa, volatilidade, autoritarismo) pode ser evitada com instituições, como na Noruega.',
+    'A interdependência pode ser usada como arma (dólar, chips, minerais, gás); países buscam resiliência diversificando fornecedores.',
+    'O debate sobre se o comércio evita a guerra voltou com a invasão da Ucrânia e a rivalidade EUA–China.'
+  ],
+  links:[
+    {tipo:'busca', nome:'Minerais críticos e terras raras — geopolítica', url:'https://www.youtube.com/results?search_query=minerais+cr%C3%ADticos+terras+raras+geopol%C3%ADtica+China+Brasil', desc:'Vídeos sobre a disputa por minerais estratégicos.'},
+    {tipo:'busca', nome:'Maldição dos recursos naturais e doença holandesa', url:'https://www.youtube.com/results?search_query=maldi%C3%A7%C3%A3o+dos+recursos+naturais+doen%C3%A7a+holandesa+explica%C3%A7%C3%A3o', desc:'Aulas de economia e geografia.'},
+    {tipo:'busca', nome:'Hidrogênio verde no Pecém', url:'https://www.youtube.com/results?search_query=hidrog%C3%AAnio+verde+Pec%C3%A9m+Cear%C3%A1', desc:'Reportagens sobre o polo cearense.'}
+  ]
+},
+
+'gg-18': {
+  tags:'sul global terceiro mundo conferência de bandung 1955 movimento não alinhado g77 nova ordem econômica internacional linha brandt brics membros parceiros novo banco de desenvolvimento declaração de fortaleza 2014 ibas g20 presidência brasileira 2024 aliança global contra a fome cop30 belém refugiados convenção de 1951 protocolo de 1967 declaração de cartagena lei 9.474 de 1997 conare não devolução deslocados internos apátridas asilo político acnur tendências globais 2025 117,8 milhões operação acolhida interiorização venezuelanos haitianos warao',
+  objetivo:`Ao final, você vai saber explicar o que é o <b>Sul Global</b> e como ele se organiza (de Bandung aos BRICS ampliados), quem são os <b>refugiados</b> e os deslocados à força, quais leis os protegem, quantos são hoje, e como o Brasil atua nesses dois campos — da diplomacia do G20 à Operação Acolhida.`,
+  porque:`<p>A maior parte da humanidade vive no chamado Sul Global — e esse conjunto de países ganha cada vez mais peso na economia e na política mundiais. O Brasil se apresenta como uma das suas vozes, presidiu o G20 em 2024, sediou a COP30 em Belém em 2025 e é membro fundador dos BRICS.</p>
+  <p>Ao mesmo tempo, mais de 117 milhões de pessoas no mundo foram forçadas a deixar suas casas por guerras e perseguições, e o Brasil se tornou um dos principais destinos da América do Sul. Venezuelanos, haitianos, cubanos e afegãos vivem hoje em cidades brasileiras, inclusive em Fortaleza. Esta aula completa o que a aula gg-05 apresenta sobre migrações.</p>`,
+  corpo:`
+  <h3>1. O que é o "Sul Global"</h3>
+  <p>A expressão designa, de forma ampla, os países em desenvolvimento da América Latina, da África, da Ásia e da Oceania — boa parte deles ex-colônias. Não é uma definição geográfica rígida: a Austrália está no hemisfério sul, mas não é considerada Sul Global; a China e a Índia estão no hemisfério norte, mas são. O termo substituiu em parte o antigo "Terceiro Mundo" e a "linha Brandt" (um relatório de 1980 que dividiu o mundo entre Norte rico e Sul pobre).</p>
+  <h3>2. Da descolonização aos BRICS</h3>
+  <ul>
+    <li><b>Conferência de Bandung</b> (Indonésia, 1955): 29 países asiáticos e africanos recém-independentes condenaram o colonialismo e defenderam a cooperação entre si (aula hg-20).</li>
+    <li><b>Movimento dos Não Alinhados</b> (Belgrado, 1961): países que se recusavam a escolher entre EUA e URSS. Hoje tem cerca de 120 membros.</li>
+    <li><b>G77</b> (1964): coalizão de países em desenvolvimento na ONU, hoje com mais de 130 membros, que propôs nos anos 1970 uma "Nova Ordem Econômica Internacional" com preços mais justos para as matérias-primas.</li>
+    <li><b>BRICS</b>: o termo BRIC foi criado em 2001 por um economista do banco Goldman Sachs para Brasil, Rússia, Índia e China; os países transformaram o rótulo em fórum político em 2009 e incluíram a África do Sul em 2011. A partir de 2024–2025, o grupo se ampliou para <b>11 membros</b> — Brasil, Rússia, Índia, China, África do Sul, Egito, Etiópia, Irã, Emirados Árabes Unidos, Indonésia e Arábia Saudita (que mantém posição ambígua sobre a adesão plena) — e criou a categoria de <b>países parceiros</b>, com cerca de dez nações, como Cuba, Bolívia, Nigéria, Malásia e Vietnã.</li>
+    <li>Na cúpula de <b>Fortaleza</b> (2014), os BRICS criaram o <b>Novo Banco de Desenvolvimento</b>, com sede em Xangai, presidido desde 2023 pela ex-presidente Dilma Rousseff, e um Arranjo Contingente de Reservas, alternativas ao Banco Mundial e ao FMI (aula gg-14).</li>
+    <li>No <b>G20</b>, que reúne as maiores economias do Norte e do Sul, o Brasil presidiu o grupo em 2024 e lançou a Aliança Global contra a Fome e a Pobreza.</li>
+  </ul>
+  <div class="box box-debate"><span class="rot">Debate: o Sul Global existe?</span>Críticos dizem que o termo junta realidades incompatíveis: a China, segunda maior economia do mundo e potência nuclear, e o Haiti; democracias como Brasil, Índia e África do Sul e ditaduras como o Irã. Os interesses também divergem: Índia e China são rivais; o Brasil quer vender alimentos que outros países do Sul querem proteger. Defensores respondem que o termo descreve uma experiência comum — o passado colonial, a posição periférica na economia mundial, a sub-representação nas instituições de 1945 — e uma agenda compartilhada: reforma da ONU e do FMI, financiamento climático, acesso a tecnologia. Para o Brasil, que se vê como "ponte" entre o Ocidente e o Sul, o desafio é manter boas relações com todos sem ser arrastado para o bloco de nenhuma grande potência — especialmente num BRICS em que Rússia e Irã têm posições abertamente antiocidentais.</div>
+  <h3>3. Quem é refugiado?</h3>
+  <table class="dados">
+    <tr><th>Categoria</th><th>Definição</th></tr>
+    <tr><td><b>Refugiado</b></td><td>Pela Convenção de 1951 da ONU e seu Protocolo de 1967, é quem deixou seu país por fundado temor de perseguição por raça, religião, nacionalidade, grupo social ou opinião política. A <b>Declaração de Cartagena</b> (1984), adotada na América Latina, ampliou o conceito para quem foge de <b>grave e generalizada violação de direitos humanos</b>.</td></tr>
+    <tr><td><b>Solicitante de refúgio</b></td><td>Quem pediu o reconhecimento e aguarda a decisão.</td></tr>
+    <tr><td><b>Deslocado interno</b></td><td>Quem foi forçado a deixar sua casa, mas permaneceu dentro do próprio país — a maioria dos deslocados do mundo.</td></tr>
+    <tr><td><b>Apátrida</b></td><td>Pessoa que não é reconhecida como cidadã por nenhum país.</td></tr>
+    <tr><td><b>Migrante</b></td><td>Termo amplo para quem muda de país por qualquer motivo, inclusive trabalho e família.</td></tr>
+    <tr><td><b>Asilo político</b></td><td>Proteção concedida a perseguidos políticos, tradição forte na América Latina e prevista na Constituição brasileira.</td></tr>
+  </table>
+  <p>O princípio mais importante é a <b>não devolução</b> (<i>non-refoulement</i>): nenhum país pode mandar alguém de volta para um lugar onde sua vida ou liberdade estejam ameaçadas.</p>
+  <h3>4. Os números</h3>
+  <p>Segundo o relatório <i>Tendências Globais</i> do ACNUR (junho de 2026), no fim de 2025 havia <b>117,8 milhões</b> de pessoas deslocadas à força no mundo — a primeira queda em dez anos, depois de 123,3 milhões em 2024 —, o equivalente a uma em cada 70 pessoas do planeta. Desse total:</p>
+  <ul>
+    <li>cerca de <b>68,7 milhões</b> eram deslocados internos;</li>
+    <li>cerca de <b>41,6 milhões</b> eram refugiados (queda de 3%), em grande parte por causa de retornos ao Afeganistão, à Síria e ao Sudão — muitos deles feitos sob pressão e em condições difíceis;</li>
+    <li>quase 9 milhões aguardavam a decisão sobre seus pedidos de refúgio.</li>
+  </ul>
+  <p>O Sudão é a maior crise de deslocamento do mundo. Ao contrário do que muitos imaginam, a maioria dos refugiados vive em <b>países vizinhos</b> ao seu, quase sempre em países de renda média ou baixa — não na Europa ou nos EUA.</p>
+  <h3>5. O Brasil e os refugiados</h3>
+  <p>A <b>Lei 9.474/1997</b>, considerada uma das mais avançadas do mundo, incorporou a definição ampliada de Cartagena e criou o <b>Conare</b> (Comitê Nacional para os Refugiados), que decide os pedidos. Solicitantes podem trabalhar, estudar e usar o SUS enquanto aguardam. O Brasil também usa vistos humanitários (para haitianos, sírios, afegãos e ucranianos).</p>
+  <p>Diante da crise na Venezuela, o governo criou em 2018 a <b>Operação Acolhida</b>, em Roraima, com recepção na fronteira, abrigos e um programa de <b>interiorização</b>, que levou venezuelanos voluntariamente para cidades de todo o país com mais oportunidades de emprego. Segundo o relatório <i>Refúgio em Números</i> (2026), o Brasil recebeu <b>75,6 mil pedidos de refúgio em 2025</b> — e, pela primeira vez, os cubanos superaram os venezuelanos entre os solicitantes — e já ultrapassou <b>165 mil refugiados reconhecidos</b>.</p>
+  <div class="box box-analogia"><span class="rot">Analogia</span>A diferença entre refugiado e migrante econômico é parecida com a diferença entre quem sai de casa porque ela está pegando fogo e quem se muda porque achou um emprego melhor em outra cidade. Os dois merecem respeito, mas só o primeiro não pode, de jeito nenhum, ser mandado de volta para dentro da casa em chamas — é isso que a regra da não devolução garante.</div>`,
+  conceitos:[
+    ['Sul Global','Conjunto amplo de países em desenvolvimento, em boa parte ex-colônias.'],
+    ['Conferência de Bandung','Encontro afro-asiático de 1955 contra o colonialismo.'],
+    ['Movimento Não Alinhado','Países que não se alinharam a EUA nem URSS na Guerra Fria.'],
+    ['BRICS','Grupo de grandes economias emergentes, ampliado para 11 membros e com países parceiros.'],
+    ['Novo Banco de Desenvolvimento','Banco dos BRICS criado na cúpula de Fortaleza (2014).'],
+    ['Refugiado','Pessoa que deixou seu país por perseguição ou grave violação de direitos humanos.'],
+    ['Deslocado interno','Pessoa forçada a deixar sua casa sem atravessar fronteira internacional.'],
+    ['Não devolução','Proibição de mandar alguém para onde sua vida ou liberdade corra risco.'],
+    ['Declaração de Cartagena','Documento latino-americano de 1984 que ampliou o conceito de refugiado.'],
+    ['Operação Acolhida','Resposta brasileira, desde 2018, à chegada de venezuelanos.']
+  ],
+  mitos:[
+    ['A maioria dos refugiados vai para países ricos.','A maioria fica em países vizinhos, em geral de renda média ou baixa.'],
+    ['Refugiado e imigrante ilegal são a mesma coisa.','Pedir refúgio é um direito garantido por tratados; o solicitante está em situação regular enquanto aguarda a decisão.'],
+    ['Os BRICS são uma aliança militar contra o Ocidente.','São um fórum político e econômico, sem compromisso de defesa, com membros que têm posições muito diferentes.']
+  ],
+  ceara:`<p>Fortaleza tem dois capítulos nessa história. Em julho de 2014, a cidade sediou a 6ª Cúpula dos BRICS, que aprovou a <b>Declaração de Fortaleza</b> e criou o Novo Banco de Desenvolvimento — um marco da diplomacia do Sul Global.</p>
+  <p>E a cidade também recebe pessoas em busca de proteção. Venezuelanos chegaram ao Ceará pelo programa de interiorização da Operação Acolhida, e famílias do povo indígena venezuelano <b>Warao</b>, que fugiram da crise em seu país, passaram a viver em Fortaleza, com apoio de prefeitura, Defensoria, universidades, igrejas e organizações sociais — num desafio de acolhimento que respeite sua língua e sua cultura.</p>`,
+  resumo:[
+    'O Sul Global reúne países em desenvolvimento, em boa parte ex-colônias; o termo é útil, mas criticado por juntar realidades muito diferentes.',
+    'De Bandung (1955) aos Não Alinhados, ao G77 e aos BRICS ampliados (11 membros e cerca de 10 parceiros), o Sul busca peso nas instituições globais.',
+    'Os BRICS criaram em Fortaleza (2014) o Novo Banco de Desenvolvimento.',
+    'Refugiados são protegidos pela Convenção de 1951, pelo Protocolo de 1967 e, na América Latina, pela Declaração de Cartagena; a não devolução é o princípio central.',
+    'No fim de 2025 havia 117,8 milhões de deslocados à força (41,6 milhões de refugiados), primeira queda em dez anos.',
+    'O Brasil tem lei avançada (9.474/1997), a Operação Acolhida e mais de 165 mil refugiados reconhecidos.'
+  ],
+  links:[
+    {tipo:'site', nome:'ACNUR Brasil — dados sobre refúgio', url:'https://www.acnur.org/br/dados-refugiados-no-brasil-e-no-mundo', desc:'Números atualizados sobre refugiados no Brasil e no mundo.'},
+    {tipo:'busca', nome:'O que é o Sul Global', url:'https://www.youtube.com/results?search_query=o+que+%C3%A9+o+Sul+Global+explica%C3%A7%C3%A3o+geopol%C3%ADtica', desc:'Vídeos explicativos sobre o conceito.'},
+    {tipo:'busca', nome:'Operação Acolhida e a interiorização de venezuelanos', url:'https://www.youtube.com/results?search_query=Opera%C3%A7%C3%A3o+Acolhida+interioriza%C3%A7%C3%A3o+venezuelanos+Roraima', desc:'Reportagens sobre a resposta brasileira.'}
   ]
 },
 

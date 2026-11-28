@@ -1,5 +1,5 @@
 // Brasil a Fundo — service worker (funciona offline depois da primeira visita)
-const CACHE = 'brasil-a-fundo-v3';
+const CACHE = 'brasil-a-fundo-v4';
 const ARQUIVOS = ['./', './index.html', './manifest.webmanifest', './icon-192.png', './icon-512.png', './apple-touch-icon.png'];
 
 self.addEventListener('install', e => {
